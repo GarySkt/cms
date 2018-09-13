@@ -9,6 +9,10 @@
 	<div class="field">
 		<select class="txtCategoryPost" name="txtCategoryPost">
 			<option value="0">-- Seleccionar Categoria --</option>
+				<?php foreach($categories as $category):?>
+					<option value="<?php echo $category['id'];?>"><?php echo $category['categoria'];?></option>
+				<?php endforeach;?>
+
 		</select>
 	</div>
 
@@ -20,6 +24,6 @@
 	<p><b>Publicaci&oacute;n</b></p>
 	<!--CKEDITOR -->
 	<textarea name="txtDescripcion" id="txtDescripcion"></textarea>
-	<button class="ui blue basic button">Subir Publicaci&oacute;n</button>
+	<button class="ui blue basic button btnSavePost">Subir Publicaci&oacute;n</button>
 	<p class="clearfix"></p>
 </form>

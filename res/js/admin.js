@@ -98,4 +98,58 @@ try	{
 			}
 		});
 	});
+
+	$(".btnSavePost").on("click", function(e){
+		//evitar que se llame el formulario
+		e.preventDefault();
+		var description = CKEDITOR.instances.txtDescripcion.getData()
+			name = $('.txtNamePost').val().trim(),
+			category_id=$('.txtCategoryPost').val().trim();
+			if(description !== "" && name !== "" && category_id>0) {
+				//subir publicacion
+				//contiene toda la informacion del formulario
+				var formData = new FormData($("#new_posts_container")[0]);
+				//agregar descripcion append
+				formData.append("description",description);
+
+				$.ajax({
+					//xhr request de http
+					xhr: function(){
+						var xhr = new window.XMLHttpRequest();
+						//cada vez q avance el progreso esto se ejecuta
+						xhr.upload.addEventListener("progress", function(evt){
+							//lenghcomputable retorna verdadero o false
+							if (evt.lenghtComputable) {
+								var percentComplete = evt.loaded / evt.total;
+								percentComplete = parseInt(percentComplete * 100);
+								console.log(percentComplete);
+							}
+						},false);
+						return xhr;
+					},
+					type: "POST",
+					url: root + "res/php/admin_actions/new_post.php",
+					data: formData,
+					processData: false,
+					contentType: false,
+					beforeSend: function(){
+						//nada
+					},
+					success: function(data){
+						//vaciar cajas de texto
+						$('.txtNamePost, .image_file').val("");
+						//vaciar textarea - contenido post
+						CKEDITOR.instances['txtDescripcion'].setData("");
+						alert("Se subio la publicacion");
+					},
+					error: function(){
+						alert("Error");
+					}
+				});
+
+			}else{
+				alert("Llene todos los campos.");
+			}
+		console.log(description);
+	});
 });
