@@ -16,6 +16,26 @@
 			]);
 			return $posts;
 		}
+
+		public function getPostInfo($id_post){
+
+			global $database;
+
+			$posts = $database->select("post",[
+				//unir tabla post con categoria 
+				"[>]categoria"=>["id_categoria"=>"id"]
+			],[	
+				"post.name",
+				"post.body",
+				"post.img_post",
+				"post.created_at",
+				"categoria.categoria"
+			],[
+				"post.id_post" => $id_post				
+			]);
+			return $posts;
+
+		}
 		
 	}
 
@@ -82,7 +102,7 @@
 			//tabladonde se insertara -- informacion a gardar
 			$database->insert("post",[
 				"name"=>htmlentities($name),
-				"body"=>htmlentities($description),
+				"body"=>$description,
 				"img_post"=>$name_img,
 				"id_categoria"=>htmlentities($category_id),
 				"admin_id"=>$admin_id,

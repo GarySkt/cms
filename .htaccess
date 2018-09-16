@@ -7,3 +7,8 @@ RewriteRule ^log-out$ res/php/user_actions/log-out.php [QSA]
 
 RewriteRule ^admin/posts$ admin/index.php?section=posts [QSA]
 RewriteRule ^admin/categories$ admin/index.php?section=categories [QSA]
+
+#Ruta Usuarios - cadena de expresion regular para el id de publicaciones
+RewriteRule ^post/([0-9]+)$ index.php?section=post&id_post=$1 [QSA]
+RewriteRule ^register$ index.php?section=register [QSA]
+RewriteRule ^log-in$ index.php?section=log-in [QSA]
