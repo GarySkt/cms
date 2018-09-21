@@ -5,12 +5,27 @@
   <a class="item">
     Publicaciones
   </a>  
-  <div  class="right menu">
-    <a href="http://localhost/cms/log-in" class="item">
-      Iniciar Sesion
+  <?php if(isset($_SESSION["user"])):?>
+    <a class="item">
+      Mis publicaciones      
     </a>
-    <a href="http://localhost/cms/register" class="item">
-      Registrarme
-    </a>
-  </div>
+    <?php endif;?>
+
+
+  <?php if(!isset($_SESSION["user"])):?>
+    <div  class="right menu">
+      <a href="http://localhost/cms/log-in" class="item">
+        Iniciar Sesion
+      </a>
+      <a href="http://localhost/cms/register" class="item">
+        Registrarme
+      </a>
+    </div>
+    <?php else: ?>
+      <div  class="right menu">
+      <a href="http://localhost/cms/log-out" class="item">
+        Cerrar Sesi&oacute;n
+      </a>      
+    </div>
+<?php endif;?>
 </div>

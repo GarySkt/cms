@@ -2,6 +2,73 @@
 	require 'init.php';
 	class User_Actions{
 
+		public function logIn($username_email, $pass){
+			//esta variable esta en init.php
+			global $database;
+
+			$data = $database->select("users", [
+				"password"
+		],[
+			"OR"=>[
+				"username"=>$username_email,
+				"email"=>$username_email
+			]
+		]);
+			$password_db = $data[0]["password"];
+			if (password_verify($pass,$password_db)) {
+			return true;
+			}else{
+				return false;
+			}			
+		}
+
+
+		public function getProfile($session){
+			global $database;
+
+			$user = $database->select("users",[
+				"user_id"
+
+			],[
+				"OR"=>[
+					"username"=> $session,
+					"email"=>$session
+				]				
+			]);
+			return $user;
+		}
+		public function checkExistance($username,$email){
+			global $database;
+
+			$users = $database->count("users",[
+				"OR"=>[
+					"username"=> $username,
+					"email"=>$email
+				]
+				
+			]);
+			return $users;
+		}
+
+		public function register($name,$last_name,$username,$email,$pass){
+			global $database;
+
+			//evitar redundacia de datos 
+			if ($this->checkExistance($username,$email)==0) {
+					$register = $database->insert("users",[
+					"name" => htmlentities($name),
+					"last_name"=>htmlentities($last_name),
+					"username"=>htmlentities($username),
+					"email"=>htmlentities($email),
+					"password"=> password_hash($pass, PASSWORD_BCRYPT),
+					"created_at"=>time()
+				]);
+					return $database->id();				
+			}else{
+				return false;
+			}					
+		}
+
 		public function getRecentPosts(){
 			global $database;
 
@@ -34,9 +101,16 @@
 				"post.id_post" => $id_post				
 			]);
 			return $posts;
+		}		
+		public function markAsFavorite($post_id, $user_id){
+			global $database;
 
+			$database->insert("favorites",[
+				"user_id"=>$user_id,
+				"post_id"=>$post_id
+			]);
+			return $database->id();
 		}
-		
 	}
 
 	class Admin_Actions{
