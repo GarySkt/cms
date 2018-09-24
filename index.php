@@ -5,10 +5,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CMS</title>
+	<title>Direccion Regional de Comercio Exterior y Turismo</title>
 	<link rel="stylesheet" href="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://localhost/cms/res/css/main.css">
+	<link rel="icon" type="image/png" href="res/img/escudo.png">
 </head>
 <body>
 	<?php require 'views/nav/main_nav.php'; ?>
@@ -36,6 +37,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.js"></script>
+	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.js"></script>
 	<script src="http://localhost/cms/res/js/main.js"></script>
 </body>
 </html>
