@@ -140,9 +140,10 @@
 				"admin_id",
 				"username"
 			],[
-				//where
+				"OR"=>[
+				"username"=>$email,
 				"email"=>$email
-
+				]
 			]);
 			return $admin;
 		}

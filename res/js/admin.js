@@ -101,15 +101,16 @@ try	{
 
 	$(".btnSavePost").on("click", function(e){
 		//evitar que se llame el formulario
-		e.preventDefault();
-		var description = CKEDITOR.instances.txtDescripcion.getData()
+		e.preventDefault();	//prevenir funcionamiento normal de recargar toda la pagina	
+		var description = CKEDITOR.instances.txtDescripcion.getData(),//obteniendo infomracion del ckeditor
 			name = $('.txtNamePost').val().trim(),
 			category_id=$('.txtCategoryPost').val().trim();
+			//chequear q los campos no esten vacios
 			if(description !== "" && name !== "" && category_id>0) {
 				//subir publicacion
 				//contiene toda la informacion del formulario
 				var formData = new FormData($("#new_posts_container")[0]);
-				//agregar descripcion append
+				//agregar descripcion con append
 				formData.append("description",description);
 
 				$.ajax({
@@ -133,11 +134,12 @@ try	{
 					processData: false,
 					contentType: false,
 					beforeSend: function(){
-						//nada
+						
 					},
 					success: function(data){
 						//vaciar cajas de texto
-						$('.txtNamePost, .image_file').val("");
+						console.log(data);
+						$('.txtNamePost,.image_file').val("");
 						//vaciar textarea - contenido post
 						CKEDITOR.instances['txtDescripcion'].setData("");
 						alert("Se subio la publicacion");
