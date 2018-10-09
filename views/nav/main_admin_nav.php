@@ -4,7 +4,10 @@
   </a>
   <a href="categories" class="item">
     Categorias
-  </a>  
+  </a>
+  <a href="banner" class="item">
+    Banner
+  </a>   
   <div class="right menu">
     <a href="http://localhost/cms/log-out" class="item">
       Cerrar Sesi&oacute;n

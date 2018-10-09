@@ -5,7 +5,6 @@ $(document).ready(function(){
 //ckeeditor
 try	{
 	CKEDITOR.replace('txtDescripcion');
-
 }catch(e){}
 
 
@@ -154,4 +153,11 @@ try	{
 			}
 		console.log(description);
 	});
+
+	
+
+
+
+
+
 });

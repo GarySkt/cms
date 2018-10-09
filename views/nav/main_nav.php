@@ -5,10 +5,17 @@
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
     <i class="fa fa-university"></i>Institucional
     <div class="menu">      
-      <a href="#" class="item">Mision y Vision</a>
-      <a href="#" class="item">Competencia y naturaleza</a>
-      <a href="#" class="item">Fines</a>
-      <a href="#" class="item">Funciones</a>
+      <a href="http://localhost/cms/misionvision" class="item">Mision y Vision</a>
+      <a href="http://localhost/cms/competencianaturaleza" class="item">Competencia y naturaleza</a>
+      <a href="http://localhost/cms/fines" class="item">Fines</a>      
+      <div class="ui simple dropdown item">
+        Funciones<i class="angle right icon"></i>
+        <div class="menu">
+          <a href="#" class="item">Organo de direccion</a>
+          <a href="#" class="item">Organo de asesoramiento y apoyo</a>
+          <a href="#" class="item">Organos de Linea</a>
+        </div>        
+      </div>
       <a href="#" class="item">Organizacion</a>
       <a href="#" class="item">Transparencia</a>
     </div>
@@ -21,8 +28,9 @@
       <a href="#" class="item">Informacion Presupuestal</a>
     </div>    
   </div>  
-  <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <i class="fa fa-truck" aria-hidden="true"></i>Comercio Exterior
+  <div class="ui simple dropdown item">    
+    <a href="http://localhost/cms/cx" style="color:#FFFFFF;">
+    <i class="fa fa-truck" aria-hidden="true"></i>Comercio Exterior</a>    
     <div class="menu">
       <a href="#" class="item">Objetivos</a>
       <a href="#" class="item">Funciones</a>
@@ -82,3 +90,4 @@
     </div>
 <?php endif;?>
 </div>
+

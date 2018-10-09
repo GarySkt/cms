@@ -47,6 +47,13 @@
 		){
 			require '../views/admin/categories.php';
 
+		}elseif(
+			//si la sesion esta iniciada y  hay vista seleccionada
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="banner"
+		){
+			require '../views/admin/banner.php';
 		}
 
 	 ?>

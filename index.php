@@ -32,8 +32,31 @@
 			$_GET['section']=="log-in"
 		){
 			require 'views/login.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="misionvision"
+		){
+			require 'views/main_nav/misionvision.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="competencianaturaleza"
+		){
+			require 'views/main_nav/competencianaturaleza.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="fines"
+		){
+			require 'views/main_nav/fines.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="cx"
+		){
+			require 'views/main_nav/cx.php';
 		}
+
 	 ?>
+	 
+	 <?php require 'views/nav/footer.php';?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.js"></script>
