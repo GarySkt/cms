@@ -3,8 +3,7 @@
 	<p><b>Nombre de la publicaci&oacute;n</b></p>
 	<div class="ui input">
 		<input type="text" class="txtNamePost" name="txtNamePost" placeholder="Nombre de la publicaci&oacute;n">
-	</div>
-	
+	</div>	
 	<p><b>Categoria</b></p>
 	<div class="field">
 		<select class="txtCategoryPost" name="txtCategoryPost">
@@ -12,15 +11,12 @@
 				<?php foreach($categories as $category):?>
 					<option value="<?php echo $category['id'];?>"><?php echo $category['categoria'];?></option>
 				<?php endforeach;?>
-
 		</select>
 	</div>
-
 	<p><b>Seleccione una imagen de portada</b></p>
 	<div class="ui input">
 		<input type="file" class="image_file" name="image_file">
 	</div>
-
 	<p><b>Publicaci&oacute;n</b></p>
 	<!--CKEDITOR -->
 	<textarea name="txtDescripcion" id="txtDescripcion"></textarea>

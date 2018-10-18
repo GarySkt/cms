@@ -3,19 +3,30 @@ RewriteEngine on
 
 RewriteRule ^log-out$ res/php/user_actions/log-out.php [QSA]
 # [QSA] para mandar valores
+
 #Ruta administradores
 
 RewriteRule ^admin/posts$ admin/index.php?section=posts [QSA]
 RewriteRule ^admin/categories$ admin/index.php?section=categories [QSA]
 RewriteRule ^admin/banner$ admin/index.php?section=banner [QSA]
+RewriteRule ^admin/pom$ admin/index.php?section=pom [QSA]
 
 #Ruta Usuarios - cadena de expresion regular para el id de publicaciones
+
 RewriteRule ^post/([0-9]+)$ index.php?section=post&id_post=$1 [QSA]
 RewriteRule ^register$ index.php?section=register [QSA]
 RewriteRule ^log-in$ index.php?section=log-in [QSA]
+RewriteRule ^home$ index.php?section=home [QSA]
+
 #main_nav
+
 RewriteRule ^misionvision$ index.php?section=misionvision [QSA]
 RewriteRule ^competencianaturaleza$ index.php?section=competencianaturaleza [QSA]
 RewriteRule ^fines$ index.php?section=fines [QSA]
 RewriteRule ^cx$ index.php?section=cx [QSA]
+
+#cx
+RewriteRule ^objetivos_funciones$ index.php?section=objetivos_funciones [QSA]
+RewriteRule ^pom$ index.php?section=pom [QSA]
+RewriteRule ^sectores_exportacion$ index.php?section=sectores_exportacion [QSA]
 

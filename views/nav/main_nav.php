@@ -1,9 +1,9 @@
-<div class="ui pointing menu navbar" style="margin-bottom: 0px; background-color: #FF0000;">
+<div class="ui pointing menu navbar" style="margin-bottom: 0px; background-color: #FF0000; margin-bottom: 5px;">
   <a href="index.php" class="item" style="color:#FFFFFF;">
-    <i class="fa fa-home" aria-hidden="true"></i>Inicio
+    <i class="home icon"></i>Inicio
   </a>  
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <i class="fa fa-university"></i>Institucional
+    <i class="university icon"></i>Institucional
     <div class="menu">      
       <a href="http://localhost/cms/misionvision" class="item">Mision y Vision</a>
       <a href="http://localhost/cms/competencianaturaleza" class="item">Competencia y naturaleza</a>
@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <i class="fa fa-folder" aria-hidden="true"></i>Gestion
+    <i class="folder icon"></i>Gestion
     <div class="menu">
       <a href="#" class="item">Actividades Oficiales</a>
       <a href="#" class="item">Planeamiento y Organizacion</a>
@@ -30,16 +30,17 @@
   </div>  
   <div class="ui simple dropdown item">    
     <a href="http://localhost/cms/cx" style="color:#FFFFFF;">
-    <i class="fa fa-truck" aria-hidden="true"></i>Comercio Exterior</a>    
+    <i class="truck icon"></i>Comercio Exterior</a>    
     <div class="menu">
-      <a href="#" class="item">Objetivos</a>
-      <a href="#" class="item">Funciones</a>
-      <a href="#" class="item">Analisis Economico</a>
+      <a href="http://localhost/cms/objetivos_funciones" class="item">Objetivos y Funciones</a>      
+      <a href="http://localhost/cms/pom" class="item">Planes Operativos de Mercado</a>
+      <a href="http://localhost/cms/sectores_exportacion" class="item">Sectores de Exportacion</a>
       <a href="#" class="item">Analisis de Exportaciones</a>
+      <a href="#" class="item">PERX</a>
     </div>
   </div> 
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <i class="fa fa-building" aria-hidden="true"></i>Turismo
+    <i class="building icon"></i>Turismo
     <div class="menu">
       <a href="#" class="item">Objetivos</a>
       <a href="#" class="item">Funciones</a>
@@ -48,7 +49,7 @@
     </div>
   </div>
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <i class="fab fa-firstdraft"></i>Artesania
+    <i class="paint brush icon"></i>Artesania
     <div class="menu">
       <a href="#" class="item">Objetivos</a>
       <a href="#" class="item">Funciones</a>
@@ -59,14 +60,14 @@
     </div>
   </div>
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <i class="fas fa-info-circle"></i>Datos Generales
+    <i class="info icon"></i>Datos Generales
     <div class="menu">
       <a href="#" class="item">Directorio institucional</a>
       <a href="#" class="item">Formato de solicitud de acceso a la informacion publica</a>         
     </div>
   </div>  
   <a href="#" class="item" style="color:#FFFFFF;">
-    <i class="fas fa-at"></i>Contactenos
+    <i class="users icon"></i>Contactenos
   </a>
   <?php if(isset($_SESSION["user"])):?>
     <a class="item">

@@ -52,7 +52,23 @@
 			$_GET['section']=="cx"
 		){
 			require 'views/main_nav/cx.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="objetivos_funciones"
+		){
+			require 'views/main_nav/cx/objetivos_funciones.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="pom"
+		){
+			require 'views/main_nav/cx/pom.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="sectores_exportacion"
+		){
+			require 'views/main_nav/cx/sectores_exportacion.php';
 		}
+
 
 	 ?>
 	 

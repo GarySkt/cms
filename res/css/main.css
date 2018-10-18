@@ -1,5 +1,6 @@
 body{
 	background-color: #f0f0f0;
+	margin: 10px;
 }
 
 .background_main{
@@ -9,6 +10,7 @@ body{
 	background-size: cover;
 	background-position: bottom;
 	position: relative;
+
 }
 .overlay{
 	position: absolute;

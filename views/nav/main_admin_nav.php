@@ -7,7 +7,13 @@
   </a>
   <a href="banner" class="item">
     Banner
-  </a>   
+  </a>
+  <div class="ui simple dropdown item">
+    <i class="truck icon"></i>Comercio Exterior
+    <div class="menu">
+      <a href="pom" class="item">Planes Operativos de Mercado</a>      
+    </div>    
+  </div>  
   <div class="right menu">
     <a href="http://localhost/cms/log-out" class="item">
       Cerrar Sesi&oacute;n

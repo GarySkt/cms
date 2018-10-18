@@ -54,7 +54,14 @@
 			$_GET['section']=="banner"
 		){
 			require '../views/admin/banner.php';
+		}elseif(			
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="pom"
+		){
+			require '../views/admin/pom.php';
 		}
+
 
 	 ?>
 
