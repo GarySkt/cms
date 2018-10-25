@@ -51,12 +51,13 @@
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
     <i class="paint brush icon"></i>Artesania
     <div class="menu">
-      <a href="#" class="item">Objetivos</a>
-      <a href="#" class="item">Funciones</a>
+      <a href="http://localhost/cms/objetivos_funciones_art" class="item">Objetivos y Funciones</a>      
       <a href="#" class="item">Base legal</a>
+      <a href="https://www.mincetur.gob.pe/turismo/lineas-de-intervencion/desarrollo-de-la-artesania/reconocimientos-y-concursos/" class="item" target="_blank">Reconocimientos, Concursos y Eventos</a>
+      <a href="https://artesanosdetacna.wordpress.com/" target="_blank" class="item">Artesanos de Tacna</a>
       <a href="#" class="item">Asociaciones Artesanales</a>
       <a href="#" class="item">Lineas Artesanales</a>
-      <a href="#" class="item">Formato de solicitud de inscripcion</a> 
+      <a href="#" class="item">Registro Nacional del Artesano</a> 
     </div>
   </div>
   <div class="ui simple dropdown item" style="color:#FFFFFF;">

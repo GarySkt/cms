@@ -30,3 +30,7 @@ RewriteRule ^objetivos_funciones$ index.php?section=objetivos_funciones [QSA]
 RewriteRule ^pom$ index.php?section=pom [QSA]
 RewriteRule ^sectores_exportacion$ index.php?section=sectores_exportacion [QSA]
 
+#art
+RewriteRule ^objetivos_funciones_art$ index.php?section=objetivos_funciones_art [QSA]
+
+

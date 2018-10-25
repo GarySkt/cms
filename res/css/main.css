@@ -126,3 +126,10 @@ body{
 .clearfix{
 	clear: both;
 }
+
+/*CX*/
+.title{
+	padding: 10px;
+	background-color: red;
+	color: white;
+}

@@ -1,5 +1,7 @@
 <div class="ui raised very padded text container segment">
-<h1>Objetivos</h1>
+	<div class="title">
+		<h1>Objetivos</h1>		
+	</div>
 <h2>Objetivos Generales</h2>
 <div class="ui bulleted list">
 	<div class="item">Promocionar las Exportaciones</div>
@@ -15,7 +17,10 @@
 	<div class="item">Implementar los mecanismos de facilitación de comercio exterior.</div>
 	<div class="item">Aprovechar las oportunidades comerciales en los mercados internacionales.</div>
 </div>
-<h1>Funciones</h1>
+<div class="title">
+	<h1>Funciones</h1>	
+</div>
+<br>
 <p>La Dirección de Comercio Exterior es un órgano de línea, responsable de ejecutar la política de desarrollo de comercio exterior en la región, así como de promover el desarrollo de una cultura exportadora enmarcada en las políticas nacionales y regionales; que se expiden y se encuentren vigentes. Está a cargo de un Director, designado de acuerdo a la normatividad vigente y tiene las siguientes funciones:</p>
 <div class="ui bulleted list">
 	<div class="item">Proponer y ejecutar las estrategias y programas de desarrollo de la oferta exportable y de promoción de las exportaciones regionales.</div>

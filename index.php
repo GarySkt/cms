@@ -47,7 +47,9 @@
 			$_GET['section']=="fines"
 		){
 			require 'views/main_nav/fines.php';
-		}elseif(
+		}
+//-----------------------COMERCIO EXTERIOR------------------------//
+		elseif(
 			isset($_GET['section']) &&
 			$_GET['section']=="cx"
 		){
@@ -67,6 +69,13 @@
 			$_GET['section']=="sectores_exportacion"
 		){
 			require 'views/main_nav/cx/sectores_exportacion.php';
+		}
+//-----------------------ARTESANIA------------------------//
+		elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="objetivos_funciones_art"
+		){
+			require 'views/main_nav/art/objetivos_funciones_art.php';
 		}
 
 
