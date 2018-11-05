@@ -42,9 +42,17 @@
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
     <i class="building icon"></i>Turismo
     <div class="menu">
-      <a href="#" class="item">Objetivos</a>
-      <a href="#" class="item">Funciones</a>
-      <a href="#" class="item">Directorio de Empresas turisticas</a>
+      <a href="http://localhost/cms/objetivos_dta" class="item">Objetivos</a>
+      <a href="http://localhost/cms/funciones_dta" class="item">Funciones</a>
+      <div class="ui simple dropdown item">
+        Directorio de Empresas turisticas<i class="angle right icon"></i> 
+        <div class="menu">
+          <a class="item" href="">Agencia de Viajes y Turismo</a>
+          <a class="item" href="">Restaurantes</a>
+          <a class="item" href="">Establecimientos</a>
+        </div>
+      </div>     
+
       <a href="#" class="item">Recursos turisticos</a>   
     </div>
   </div>
@@ -52,7 +60,14 @@
     <i class="paint brush icon"></i>Artesania
     <div class="menu">
       <a href="http://localhost/cms/objetivos_funciones_art" class="item">Objetivos y Funciones</a>      
-      <a href="#" class="item">Base legal</a>
+      <div class="ui simple dropdown item">
+        Base Legal<i class="angle right icon"></i> 
+        <div class="menu">
+          <a href="../cms/res/pdf/LEY-ARTESANO.pdf" target="_blank" class="item">Ley del Artesano</a>
+          <a href="../cms/res/pdf/Reconocimiento-Linea-Artesanales.pdf" target="_blank" class="item">Reconocimiento Lineas Artesanales</a>
+          <a href="../cms/res/pdf/Ordenanza_Actividades.pdf" target="_blank" class="item">Ordenanza Actividades Artesanales en la Regi&oacute;n</a>
+        </div>  
+      </div>      
       <a href="https://www.mincetur.gob.pe/turismo/lineas-de-intervencion/desarrollo-de-la-artesania/reconocimientos-y-concursos/" class="item" target="_blank">Reconocimientos, Concursos y Eventos</a>
       <a href="https://artesanosdetacna.wordpress.com/" target="_blank" class="item">Artesanos de Tacna</a>
       <a href="#" class="item">Asociaciones Artesanales</a>

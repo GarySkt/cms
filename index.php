@@ -77,7 +77,18 @@
 		){
 			require 'views/main_nav/art/objetivos_funciones_art.php';
 		}
-
+//---------------------TURISMO---------------------------//		
+		elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="objetivos_dta"
+		){
+			require 'views/main_nav/dta/objetivos_dta.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="funciones_dta"
+		){
+			require 'views/main_nav/dta/funciones_dta.php';
+		}
 
 	 ?>
 	 

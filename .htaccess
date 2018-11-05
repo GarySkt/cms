@@ -33,4 +33,8 @@ RewriteRule ^sectores_exportacion$ index.php?section=sectores_exportacion [QSA]
 #art
 RewriteRule ^objetivos_funciones_art$ index.php?section=objetivos_funciones_art [QSA]
 
+#dta
+RewriteRule ^objetivos_dta$ index.php?section=objetivos_dta [QSA]
+RewriteRule ^funciones_dta$ index.php?section=funciones_dta [QSA]
+
 
