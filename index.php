@@ -12,6 +12,14 @@
 	<link rel="icon" type="image/png" href="res/img/escudo.png">
 </head>
 <body>
+	<!--------------BANNER---------------->
+	<div class="background_main">
+		<div class="overlay">			
+		</div>
+		<hi class="main_title">
+			DIRCETUR
+		</hi>	
+	</div>
 	<?php require 'views/nav/main_nav.php'; ?>
 	<!-- si no hay una seccion seleccionada aparecera esto-->
 	<?php 

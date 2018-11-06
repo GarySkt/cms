@@ -1,13 +1,4 @@
-<div class="background_main">
-	<div class="overlay">
-		
-	</div>
 
-	<hi class="main_title">
-		DIRCETUR
-	</hi>
-	
-</div>
 <div class="ui grid stackable container" style="margin-top: 25px;">
 	<div class="sixteen wide column">
 		<h2>Publicaciones Recientes</h2>
