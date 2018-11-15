@@ -3,7 +3,8 @@
     <i class="home icon"></i>Inicio
   </a>  
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <i class="university icon"></i>Institucional
+    <a href="http://localhost/cms/dircetur" style="color:#FFFFFF;">
+    <i class="university icon"></i>Institucional</a>      
     <div class="menu">      
       <a href="http://localhost/cms/misionvision" class="item">Mision y Vision</a>
       <a href="http://localhost/cms/competencianaturaleza" class="item">Competencia y naturaleza</a>
@@ -72,7 +73,7 @@
       <a href="https://artesanosdetacna.wordpress.com/" target="_blank" class="item">Artesanos de Tacna</a>
       <a href="#" class="item">Asociaciones Artesanales</a>
       <a href="#" class="item">Lineas Artesanales</a>
-      <a href="#" class="item">Registro Nacional del Artesano</a> 
+      <a href="http://localhost/cms/rna" class="item">Registro Nacional del Artesano</a> 
     </div>
   </div>
   <div class="ui simple dropdown item" style="color:#FFFFFF;">

@@ -1,4 +1,4 @@
-<div class="ui raised very padded text container segment">
+<div class="ui raised very padded text container segment" align="justify">
 	<div class="title">
 		<h1>Objetivos</h1>		
 	</div>

@@ -1,5 +1,5 @@
-<div class="ui raised very padded text container segment">
-	<h1>Fines</h1>
+<div class="ui raised very padded text container segment" align="justify">
+	<h1 class="title">Fines</h1>
 	<p>Son fines de la Dirección Regional de Comercio Exterior y Turismo:</p>
 	<ul class="ui list">
 		<li class="item">Coadyuvar al desarrollo creciente y sostenido de la región, fomentando el comercio exterior de bienes y servicios, a través de la promoción de una cultura exportadora.</li>

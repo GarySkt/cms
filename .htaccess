@@ -17,6 +17,7 @@ RewriteRule ^post/([0-9]+)$ index.php?section=post&id_post=$1 [QSA]
 RewriteRule ^register$ index.php?section=register [QSA]
 RewriteRule ^log-in$ index.php?section=log-in [QSA]
 RewriteRule ^home$ index.php?section=home [QSA]
+RewriteRule ^dircetur$ index.php?section=dircetur [QSA]
 
 #main_nav
 
@@ -32,6 +33,7 @@ RewriteRule ^sectores_exportacion$ index.php?section=sectores_exportacion [QSA]
 
 #art
 RewriteRule ^objetivos_funciones_art$ index.php?section=objetivos_funciones_art [QSA]
+RewriteRule ^rna$ index.php?section=rna [QSA]
 
 #dta
 RewriteRule ^objetivos_dta$ index.php?section=objetivos_dta [QSA]

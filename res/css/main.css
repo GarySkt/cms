@@ -1,6 +1,9 @@
+
 body{
 	background-color: #f0f0f0;
 	margin: 10px;
+	font-family: 'Montserrat', sans-serif;
+	src: url("mystery-quest.woff2");
 }
 
 .background_main{

@@ -1,4 +1,4 @@
-<div class="ui raised very padded text container segment">
+<div class="ui raised very padded text container segment" align="justify">
 	<h1 class="title">Objetivos</h1>
 	<div class="ui bulleted list">
 		<div class="item">Alcanzar un Turismo Sostenible como herramienta de desarrollo económico, social y ambiental del Perú.</div>

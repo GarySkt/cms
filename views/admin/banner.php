@@ -1,5 +1,5 @@
-
-<script src="../res/js/jssor-slider/js/jssor.slider.mini.js"></script>
+<div class="ui raised very padded text container segment">
+	<script src="../res/js/jssor-slider/js/jssor.slider.mini.js"></script>
 <script src="../res/js/tinymce/tinymce.min.js"></script>
 <script src="../res/js/handlebars/handlebars-v1.3.0.js"></script>
 <link rel="stylesheet" href="../res/css/slider_style.css">
@@ -41,3 +41,7 @@
 	<!-- Slider Panel end -->
 	</div>
 	<script src="../res/js/slider_admin.js"></script>
+	
+</div>
+
+

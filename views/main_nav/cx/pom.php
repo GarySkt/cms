@@ -1,29 +1,17 @@
 <div class="ui raised very padded text container segment">
 	<h1>Planes Operativos de Mercado</h1>
 
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Brasil</a>
-	</div>
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Reino Unido</a>
-	</div>
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Alemania</a>
-	</div>
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Mexico</a>
-	</div>
-
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Japon</a>
-	</div>
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Panama</a>
-	</div>
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Turquia</a>
-	</div>
-	<div class="ui primary basic button">
-		<a class="" href="#" target="_blank">POM Portugal</a>
-	</div>
+	<?php
+		//$sql="SELECT * FROM tbl_uploads";
+		$con=mysqli_connect("localhost","root","","db_dircetur");
+		$result_set=mysqli_query($con,"SELECT name FROM tbl_uploads");
+		while($row=mysqli_fetch_array($result_set))
+		{
+	?>
+		<div class="ui primary basic button">
+			<a class="" href="#"><?php echo $row['name'] ?></a>
+		</div>		
+	<?php
+		}
+	?>	 
 </div>

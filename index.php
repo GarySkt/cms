@@ -2,14 +2,15 @@
 	require 'res/php/app_top.php';
  ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Direccion Regional de Comercio Exterior y Turismo</title>
 	<link rel="stylesheet" href="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://localhost/cms/res/css/main.css">
-	<link rel="icon" type="image/png" href="res/img/escudo.png">
+	<link rel="icon" type="image/png" href="res/img/escudo.png">	
+
 </head>
 <body>
 	<!--------------BANNER---------------->
@@ -19,7 +20,7 @@
 		<hi class="main_title">
 			DIRCETUR
 		</hi>	
-	</div>
+	</div>	
 	<?php require 'views/nav/main_nav.php'; ?>
 	<!-- si no hay una seccion seleccionada aparecera esto-->
 	<?php 
@@ -40,6 +41,11 @@
 			$_GET['section']=="log-in"
 		){
 			require 'views/login.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="dircetur"
+		){
+			require 'views/main_nav/dircetur.php';
 		}elseif(
 			isset($_GET['section']) &&
 			$_GET['section']=="misionvision"
@@ -84,6 +90,11 @@
 			$_GET['section']=="objetivos_funciones_art"
 		){
 			require 'views/main_nav/art/objetivos_funciones_art.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="rna"
+		){
+			require 'views/main_nav/art/rna.php';
 		}
 //---------------------TURISMO---------------------------//		
 		elseif(
@@ -106,5 +117,6 @@
 	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.js"></script>
 	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.js"></script>
 	<script src="http://localhost/cms/res/js/main.js"></script>
+	
 </body>
 </html>

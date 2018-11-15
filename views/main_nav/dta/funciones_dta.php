@@ -1,4 +1,4 @@
-<div class="ui raised very padded text container segment">
+<div class="ui raised very padded text container segment" align="justify">
 	<h1 class="title">Funciones</h1>
 	<div class="ui bulleted list">
 			<div class="item">Proponer y ejecutar las políticas en materia de desarrollo de la actividad turstica y artesanal regional.</div>

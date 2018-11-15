@@ -185,15 +185,5 @@
 			]);
 			return $database->id();
 		}
-
-		public function savePOM($pom_name,$file,$type,$size){
-			global $database;
-			$database->insert("tbl_uploads",[
-				"name"=>$pom_name
-			]);
-
-			return $database->id();
-
-		}
 	}
  ?>
