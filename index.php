@@ -20,7 +20,8 @@
 		<hi class="main_title">
 			DIRCETUR
 		</hi>	
-	</div>	
+	</div>
+	
 	<?php require 'views/nav/main_nav.php'; ?>
 	<!-- si no hay una seccion seleccionada aparecera esto-->
 	<?php 

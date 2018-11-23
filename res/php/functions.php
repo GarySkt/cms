@@ -83,6 +83,18 @@
 			]);
 			return $posts;
 		}
+		/*cx pom*/
+		public function getPom(){
+			global $database;
+
+			$pom = $database->select("tbl_uploads",[
+				"id",
+				"name"							
+			]);
+			return $pom;
+		}
+
+		/*cx pom end*/
 
 		public function getPostInfo($id_post){
 
@@ -147,6 +159,8 @@
 			]);
 			return $admin;
 		}
+
+		/*categorias*/
 		public function getCategories(){
 			global $database;
 
@@ -172,6 +186,10 @@
 			]);
 			return $delete->rowCount();
 		}
+
+		/*end categorias*/
+
+		/*post*/
 		public function savepost($name, $category_id,$description,$name_img,$admin_id){
 			global $database;
 			//tabladonde se insertara -- informacion a gardar
@@ -185,5 +203,7 @@
 			]);
 			return $database->id();
 		}
+
+		/*end post*/		
 	}
  ?>

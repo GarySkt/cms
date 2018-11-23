@@ -1,35 +1,23 @@
 <div class="ui form new_posts_container" id="new_pom_container">
+
 	<h1>Planes Operativos de Mercado</h1>	
-		<p><b>Nombre</b></p>
-		<div class="ui input">
-			<input type="text" class="txtNamePOM" placeholder="Nombre POM">
-		</div>
-		<br /><br />
-		<form action="../res/php/admin_actions/upload_pom.php" method="post" enctype="multipart/form-data">
-			<input type="file" name="file" />			
-			<button type="submit" name="btn-upload" class="ui green button btnupload">Subir</button>
-			
+		
+		<form name="formulario-envia" id="formulario-envia" enctype="multipart/form-data" method="post">
+			<table>
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" name="txtnom" id="txtnom"></td>
+				</tr>
+				<tr>
+					<td>PDF</td>
+					<td><input type="file" name="pdf" id="pdf"></td>
+				</tr>
+				<tr>
+					<td><input type="button" name="btn" id="btn" value="REGISTRAR" onclick="guardar_pom();"></td>
+				</tr>
+			</table>		
 		</form>
-		<?php
-			if(isset($_GET['success']))
-			{
-				?>
-		        <label>File Uploaded Successfully...  <a href="view.php">click here to view file.</a></label>
-		        <?php
-			}
-			else if(isset($_GET['fail']))
-			{
-				?>
-		        <label>Problem While File Uploading !</label>
-		        <?php
-			}
-			else
-			{
-				?>
-		        <label>Solo archivos en formato PDF</label>
-		        <?php
-			}
-		?>
+		
 
 	    <br /><br />
 	    <table class="ui single line table tblpom">
@@ -66,4 +54,5 @@
 				?>	 
 	    	</tbody>	    	
 	    </table>
+	    <script src="../res/js/funcion_subir_pom.js"></script>
 </div>

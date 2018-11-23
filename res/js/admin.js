@@ -97,38 +97,7 @@ try	{
 			}
 		});
 	});
-	$('.btnupload').on("click",function(){
-
-		var pom_name = $('.txtNamePOM').val().trim() //trim elimina los espacios
-			self = this; //referncia al boton
-			$.ajax({
-				type: "POST",
-				url: root + "res/php/admin_actions/upload_pom.php",
-				data: {
-					pom_name:pom_name
-				},
-				beforeSend: function(){
-					$(self).addClass("loading");
-				},
-				success: function(data){
-					$(self).removeClass("loading");
-//					console.log(data);
-				if (data > 0) {
-					alert("Se guardo correctamanente");
-					$('.txtNamePOM').val("");
-					$('.tblpom tr:last').after("<tr></tr>")
-
-				}else{
-					alert("Hubo un error al guadar.")
-				}
-
-				},
-				error: function(){
-					alert("Se ha producido un error");
-
-				}
-			});
-	});
+	
 
 	$(".btnSavePost").on("click", function(e){
 		//evitar que se llame el formulario
@@ -187,9 +156,4 @@ try	{
 	});
 
 	
-
-
-
-
-
 });

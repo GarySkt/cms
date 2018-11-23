@@ -1,9 +1,12 @@
 
 body{
-	background-color: #f0f0f0;
+	background: url("../img/3132.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 	margin: 10px;
-	font-family: 'Montserrat', sans-serif;
-	src: url("mystery-quest.woff2");
 }
 
 .background_main{

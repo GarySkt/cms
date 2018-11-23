@@ -10,7 +10,14 @@
 		$_GET['section']=="post"
 	){
 		//obtener contenido de publicacion
-		$post = $user->getPostInfo($_GET['id_post']);
-		
+		$post = $user->getPostInfo($_GET['id_post']);		
+	}
+
+	elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="pom"
+	){
+		//obtener contenido de publicacion
+		$pom = $user->getPom();		
 	}
  ?>

@@ -25,4 +25,7 @@
 		//obtener categorias de la DB
 		$categories=$admin->getCategories();
 	}
+
+	
+	
  ?>
