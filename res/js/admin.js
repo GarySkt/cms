@@ -98,6 +98,36 @@ try	{
 		});
 	});
 	
+/*eliminar pom*/
+$(".tblpom").on("click",".btnRemovePom",function(){
+		var pom_id = $(this).attr("dataPomID")
+					self = this;
+		//console.log(pom_id);
+
+		$.ajax({
+			type: "POST",
+			url: root + "res/php/admin_actions/delete_pom.php",
+			data: {
+				pom_id: pom_id
+			},
+			//cuando regrese la respuesta de la peticion
+			success: function(data){
+				console.log(data);
+				if (data > 0) {
+					$(self).parent().parent().remove();//parent(td).parent(tr).remover
+					alert("Eliminado");
+
+				}else{
+					alert("Hubo un error.");
+				}				
+			},
+			error: function(){
+				alert("Se ha producido un error.");
+			}
+		});
+	});
+/*end eliminar pom*/
+
 
 	$(".btnSavePost").on("click", function(e){
 		//evitar que se llame el formulario

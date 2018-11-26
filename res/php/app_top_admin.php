@@ -1,6 +1,7 @@
 <?php 
 	require "functions.php";
 	$admin = new Admin_Actions();
+	$user = new User_Actions();
 
 	if (
 		//si la sesion esta iniciada
@@ -26,6 +27,12 @@
 		$categories=$admin->getCategories();
 	}
 
-	
+	elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="pom"
+	){
+		//obtener contenido de publicacion
+		$pom = $user->getPom();		
+	}
 	
  ?>

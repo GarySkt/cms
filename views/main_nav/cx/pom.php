@@ -3,7 +3,7 @@
 
 	<?php foreach($pom as $pom): ?>
 		<div class="ui secondary button">
-			<a class="" href="#"><?php echo $pom['name'] ?></a>
+			<a class="" href="res/php/admin_actions/uploads/<?php echo $pom['file'] ?>" target="_blank"><?php echo $pom['name'] ?></a>
 		</div>
 	<?php endforeach; ?>	
 </div>

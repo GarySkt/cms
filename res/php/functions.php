@@ -89,7 +89,10 @@
 
 			$pom = $database->select("tbl_uploads",[
 				"id",
-				"name"							
+				"name",
+				"file",
+				"type",
+				"size"
 			]);
 			return $pom;
 		}
@@ -180,14 +183,14 @@
 		}
 		public function deletecategory($category_id){
 			global $database;
-			//tabladonde se insertara -- informacion a gardar
+			//tabladonde se insertara -- informacion a guardar
 			$delete=$database->delete("categoria",[
 				"id"=>htmlentities($category_id)
 			]);
 			return $delete->rowCount();
 		}
 
-		/*end categorias*/
+		/*end categorias*/	
 
 		/*post*/
 		public function savepost($name, $category_id,$description,$name_img,$admin_id){
@@ -204,6 +207,20 @@
 			return $database->id();
 		}
 
-		/*end post*/		
+		/*end post*/
+		/*cx*/
+		/*pom*/
+
+		public function deletepom($pom_id){
+			global $database;
+			//tabladonde se insertara -- informacion a gardar
+			$delete=$database->delete("tbl_uploads",[
+				"id"=>htmlentities($pom_id)
+			]);
+			return $delete->rowCount();
+		}
+
+		/*end pom*/
+		/*cx*/		
 	}
  ?>

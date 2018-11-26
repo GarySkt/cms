@@ -17,7 +17,6 @@
 				</tr>
 			</table>		
 		</form>
-		
 
 	    <br /><br />
 	    <table class="ui single line table tblpom">
@@ -27,32 +26,22 @@
 	    			<th>Archivo</th>
 	    			<th>Tipo</th>
 	    			<th>Tama&ntilde;o</th>
-	    			<th>Acci&oacute;n</th>
+	    			<th>Acci&oacute;nes</th>
 	    		</tr>
 	    	</thead>
 	    	<tbody>
-	    		<?php
-					//$sql="SELECT * FROM tbl_uploads";
-				    $con=mysqli_connect("localhost","root","","db_dircetur");
-					$result_set=mysqli_query($con,"SELECT * FROM tbl_uploads");
-					while($row=mysqli_fetch_array($result_set))
-					{
-				?>
-				        <tr>
-					        <td><?php echo $row['name'] ?></td>
-					        <td><?php echo $row['file'] ?></td>
-					        <td><?php echo $row['type'] ?></td>
-					        <td><?php echo $row['size'] ?> KB</td>
-					        <td><a href="../cms/res/php/admin_actions/uploads/<?php echo $row['file'] ?>" target="_blank">view file</a></td>
-					        <td>
-		    				<i class="trash icon"  style="color: #ff2a00; cursor: pointer;" title="Eliminar POM"></i>
-		    				<i class="eye icon" style="color: #4D69F6; cursor: pointer;" title="Visualizar"></i>
-		    			</td>
-				        </tr>
-				<?php
-					}
-				?>	 
+	    		<?php foreach($pom as $pom): ?>
+	    			<tr>
+	    				<td><?php echo $pom['name'] ?></td>
+	    				<td><?php echo $pom['file'] ?></td>
+	    				<td><?php echo $pom['type'] ?></td>
+	    				<td><?php echo $pom['size'] ?> KB</td>
+	    				<td>
+	    					<a href="/cms/res/php/admin_actions/uploads/<?php echo $pom['file'] ?>" target="_blank"><i class="eye icon" style="cursor: pointer;" title="Visualizar"></i></a>
+	    					<i class="trash icon btnRemovePom"  style="color: #ff2a00; cursor: pointer;" title="Eliminar POM" dataPomID="<?php echo $pom['id'];?>"></i>
+	    				</td>	    				
+	    			</tr>
+				<?php endforeach; ?>	 
 	    	</tbody>	    	
-	    </table>
-	    <script src="../res/js/funcion_subir_pom.js"></script>
+	    </table>	    	    
 </div>
