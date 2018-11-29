@@ -31,7 +31,7 @@
 		isset($_GET['section']) &&
 		$_GET['section']=="pom"
 	){
-		//obtener contenido de publicacion
+		//obtener contenido pom
 		$pom = $user->getPom();		
 	}
 	

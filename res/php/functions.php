@@ -83,6 +83,8 @@
 			]);
 			return $posts;
 		}
+		
+		/*CX*/
 		/*cx pom*/
 		public function getPom(){
 			global $database;
@@ -98,6 +100,22 @@
 		}
 
 		/*cx pom end*/
+		/*Sectores de Exportacion*/
+		public function getSectorExportacion(){
+			global $database;
+
+			$se = $database->select("sector_exportacion",[
+				"id_se",
+				"sector",
+				"producto_exportado",
+				"mercado_exportacion",
+				"total_fob"
+			]);
+			return $se;
+		}
+		/* end Sectores de Exportacion*/
+		/*end CX*/
+		
 
 		public function getPostInfo($id_post){
 
@@ -210,7 +228,16 @@
 		/*end post*/
 		/*cx*/
 		/*pom*/
-
+		/*save*/
+		public function savepom($txtnamepom){
+			global $database;
+			$database->insert("tbl_uploads",[
+				//htmlentities previene la inyectar codigo
+				"name"=>htmlentities($txtnamepom)
+			]);
+			return $database->id();
+		}
+		/*delete*/
 		public function deletepom($pom_id){
 			global $database;
 			//tabladonde se insertara -- informacion a gardar
@@ -219,8 +246,11 @@
 			]);
 			return $delete->rowCount();
 		}
-
 		/*end pom*/
+		/*Sector de Exportacion*/
+
+
+		/*emd Sector de Exportacion*/
 		/*cx*/		
 	}
  ?>

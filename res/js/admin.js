@@ -98,10 +98,13 @@ try	{
 		});
 	});
 	
-/*eliminar pom*/
-$(".tblpom").on("click",".btnRemovePom",function(){
+	
+	/*cx*/
+	/*pom*/
+	/*eliminar pom*/
+	$(".tblpom").on("click",".btnRemovePom",function(){
 		var pom_id = $(this).attr("dataPomID")
-					self = this;
+		self = this;
 		//console.log(pom_id);
 
 		$.ajax({
@@ -126,7 +129,42 @@ $(".tblpom").on("click",".btnRemovePom",function(){
 			}
 		});
 	});
-/*end eliminar pom*/
+	/*end eliminar pom*/
+	/*save pom*/
+
+	$('.btnSavePom').on("click",function(){
+		var txtnamepom = $('.txtnamepom').val().trim()
+					self = this;
+		$.ajax({
+			type:"POST",
+			url: root + "res/php/admin_actions/save_pom.php",
+			data:{
+				txtnamepom: txtnamepom
+			},
+			beforeSend: function(){
+				$(self).addClass("loading");
+			},
+			success: function(data){
+				$(self).removeClass("loading");
+				if (data > 0) {
+					alert("Guardado correctamanente");
+					$('.txtnamepom').val("");//vaciar
+
+				}else{
+					alert("Hubo un error al guardar");
+				}
+			},
+			error: function(){
+				alert("Se ha producido un error");
+			}
+
+		});
+		
+	});
+	/*end save pom*/
+
+	/*end pom*/
+	/*end cx*/
 
 
 	$(".btnSavePost").on("click", function(e){

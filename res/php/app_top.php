@@ -19,5 +19,12 @@
 	){
 		//obtener contenido de publicacion
 		$pom = $user->getPom();		
+	}elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="sectores_exportacion"
+	){
+		//obtener contenido de publicacion
+		$se = $user->getSectorExportacion();		
 	}
+
  ?>

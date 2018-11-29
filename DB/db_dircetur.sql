@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-10-2018 a las 17:08:56
+-- Tiempo de generación: 29-11-2018 a las 18:10:01
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `username`, `email`, `password`, `created_at`) VALUES
-(1, 'admin', 'admin@admin.com', '$2y$10$DSjlHDuIeK7dKcbf1/8R4uC0x.atbLgFjBcrnA285GLuNYzZf0.jW', '111');
+(1, 'admin', 'admin@admin.com', '$2y$10$d5CN1IctIIjEUOXjedMZAOIFOfy45ambh/xQCP7CNCE/YW3hWkRrK', '111');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,6 @@ INSERT INTO `categoria` (`id`, `categoria`) VALUES
 (2, 'Tecnologia'),
 (3, 'Deporte'),
 (4, 'Cultura'),
-(5, 'Otros'),
 (6, 'Turismo'),
 (7, 'Comercio Exterior');
 
@@ -99,6 +98,32 @@ INSERT INTO `post` (`id_post`, `name`, `body`, `img_post`, `id_categoria`, `admi
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `sector_exportacion`
+--
+
+CREATE TABLE `sector_exportacion` (
+  `id_se` int(11) NOT NULL,
+  `sector` varchar(100) NOT NULL,
+  `producto_exportado` varchar(300) NOT NULL,
+  `mercado_exportacion` varchar(300) NOT NULL,
+  `total_fob` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla Sectores de Exportacion';
+
+--
+-- Volcado de datos para la tabla `sector_exportacion`
+--
+
+INSERT INTO `sector_exportacion` (`id_se`, `sector`, `producto_exportado`, `mercado_exportacion`, `total_fob`) VALUES
+(1, 'Mineria', 'Minerales de cobre / Concentrados de cobre a granel / Oro / Concentrados de Zinc.', 'Brasil / Chile / China / Chile / Corea del Sur / España / India Japon / Mexico / Emiratos Arabes Unidos / Estados Unidos.', '1,140,721,422.71'),
+(2, 'Agricultura', 'Cafe', 'Alemania / Belgica / Canada / Chile / Dinamarca / Estados Unidos / Finlandia / Hungria / Irlanda / Japon / Holanda / Reino Unido / Republica Checa / Suiza.', '6,665,799.57'),
+(3, 'Agroindustria', 'Alcachofas / Maíz Blanco / Maíz Gigante de Cusco / Maíz Chulpi / Maíz Montaña / Cacao en grano / Cacao Orgánico / Cacao convencional / Aguaymanto deshidratado / Kiwicha / Chirimoyas frescas / Sal de Maras / Cañihua / Chía.', 'España / Estados Unidos / Holanda / Belgica / Canada / Japon / Italia / Alemania / Estados Unidos / Chile / Mexico / Ecuador / Rusia.', '14,249,196.71'),
+(4, 'Textil', 'Confecciones en Alpaca / Ovino / Algodón', 'Alemania / Australia / Austria / Chile / Dinamarca / España / Estados Unidos / Francia / Italia / México / Puerto Rico / Reino Unido / Suiza.', '1,568,343.34'),
+(5, 'Artesania', 'Nacimientos / Peletería / Cerámicas de animales / Artículos de decoración / Instrumentos Musicales / Bolsos / Monederos / Estuches / Cintillos / Bisutería.', 'Alemania / Australia / Bolivia / Chile / España / Estados Unidos / Francia / Italia / Mexico / Puerto Rico / Reino Unido / Austria / Suiza.', '768,760.43'),
+(6, 'Industria', 'Colorantes / Bolsas plásticas impresas / Andamios / Estructura para andamios / Contenedores / Retroexcavadora / Semirremolque / Cargador Frontal / Camiones / Tractores', 'Brasil / Canadá / Chile / Colombia / Egipto / España / Estados Unidos / Francia / Italia / India / Panamá / Suiza / México / Alemania.', '9,819,491.42');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `slider`
 --
 
@@ -114,10 +139,12 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `comment`, `img`, `link`) VALUES
-(1, '<p>Test1</p>', 'sli2.jpg', ''),
-(2, '<p>slider1</p>', 'sli1.jpg', ''),
-(3, '<p>Direccion regional de comercio exterior y turismo</p>', 'banner.png', 'http://directur.gob.pe'),
-(4, '<p>testetoasdsd</p>', 'footer-bg.jpg', '');
+(1, '<p style=\"text-align: center;\"><strong>Test1</strong></p>', 'sli2.jpg', ''),
+(2, '<p><strong>slider1</strong></p>', 'sli1.jpg', ''),
+(3, '<p style=\"text-align: center;\"><strong>Direccion regional de comercio exterior y turismo</strong></p>', 'banner.png', 'http://directur.gob.pe'),
+(4, '<p>testetoasdsd</p>', 'footer-bg.jpg', ''),
+(5, '<p>Dia mundial del turismo</p>', 'DIA.png', 'http://www.mincetur.gob.pe'),
+(6, '<p style=\"text-align: center;\"><strong>Mincetur</strong></p>', 'standard_foto1.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -152,6 +179,31 @@ CREATE TABLE `social_networks` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tbl_uploads`
+--
+
+CREATE TABLE `tbl_uploads` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `file` varchar(150) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `size` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_uploads`
+--
+
+INSERT INTO `tbl_uploads` (`id`, `name`, `file`, `type`, `size`) VALUES
+(7, 'BRASIL', '12013-brasil.pdf', 'application/pdf', 13726),
+(8, 'JAPON', '14177-pdm-japon.pdf', 'application/pdf', 3632),
+(9, 'PANAMA', '54294-pdm-panama.pdf', 'application/pdf', 2434),
+(10, 'CHILE', '82386-pdm_chile.pdf', 'application/pdf', 11611),
+(11, 'TURQUIA', '34410-turquia.pdf', 'application/pdf', 11475);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -170,7 +222,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `last_name`, `username`, `email`, `password`, `created_at`) VALUES
-(1, 'Gary', 'Calle', 'gcalle', 'gcalle@gmail.com', '$2y$10$62.ri.6.4NpzYU5YhzkiietBie/4VX3fqilW8oeZ16BBxbAul3TPC', '1537803759');
+(1, 'Gary', 'Calle', 'gcalle', 'gcalle@gmail.com', '$2y$10$62.ri.6.4NpzYU5YhzkiietBie/4VX3fqilW8oeZ16BBxbAul3TPC', '1537803759'),
+(2, 'Gary', 'Calle', 'gcallecortez', 'gcallecortez@gmail.com', '$2y$10$d5CN1IctIIjEUOXjedMZAOIFOfy45ambh/xQCP7CNCE/YW3hWkRrK', '1539610353');
 
 -- --------------------------------------------------------
 
@@ -216,6 +269,12 @@ ALTER TABLE `post`
   ADD PRIMARY KEY (`id_post`);
 
 --
+-- Indices de la tabla `sector_exportacion`
+--
+ALTER TABLE `sector_exportacion`
+  ADD PRIMARY KEY (`id_se`);
+
+--
 -- Indices de la tabla `slider`
 --
 ALTER TABLE `slider`
@@ -225,6 +284,12 @@ ALTER TABLE `slider`
 -- Indices de la tabla `slider_meta`
 --
 ALTER TABLE `slider_meta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_uploads`
+--
+ALTER TABLE `tbl_uploads`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -259,15 +324,25 @@ ALTER TABLE `categoria`
 ALTER TABLE `post`
   MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
+-- AUTO_INCREMENT de la tabla `sector_exportacion`
+--
+ALTER TABLE `sector_exportacion`
+  MODIFY `id_se` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT de la tabla `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT de la tabla `tbl_uploads`
+--
+ALTER TABLE `tbl_uploads`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
