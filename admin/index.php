@@ -54,12 +54,20 @@
 			$_GET['section']=="banner"
 		){
 			require '../views/admin/banner.php';
-		}elseif(			
+		}
+		//cx
+		elseif(			
 			isset($_SESSION['admin']) && 
 			isset($_GET['section']) &&
 			$_GET['section']=="pom"
 		){
-			require '../views/admin/pom.php';
+			require '../views/admin/cx/pom.php';
+		}elseif(			
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="sectores_exportacion"
+		){
+			require '../views/admin/cx/sectores_exportacion.php';
 		}
 
 

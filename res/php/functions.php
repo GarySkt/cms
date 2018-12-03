@@ -226,21 +226,22 @@
 		}
 
 		/*end post*/
-		/*cx*/
+		/*cx*/		
 		/*pom*/
 		/*save*/
-		public function savepom($txtnamepom){
+		public function savepom($txtnamepom,$name_img){
 			global $database;
 			$database->insert("tbl_uploads",[
 				//htmlentities previene la inyectar codigo
-				"name"=>htmlentities($txtnamepom)
+				"name"=>htmlentities($txtnamepom),
+				"file"=>$name_img
 			]);
 			return $database->id();
 		}
 		/*delete*/
 		public function deletepom($pom_id){
 			global $database;
-			//tabladonde se insertara -- informacion a gardar
+			
 			$delete=$database->delete("tbl_uploads",[
 				"id"=>htmlentities($pom_id)
 			]);
@@ -248,9 +249,32 @@
 		}
 		/*end pom*/
 		/*Sector de Exportacion*/
+		/*delete*/
+		public function deleteSE($id_se){
+			global $database;
+			
+			$delete=$database->delete("sector_exportacion",[
+				"id_se"=>htmlentities($id_se)
+			]);
+			return $delete->rowCount();
+		}
+		/*end delete*/
+		/*save*/
+		public function saveSE($txtNameSector,$txtProductoExportado,$txtMercadoExportacion,$txtTotalFOB,$name_img){
+			global $database;
+			//tabladonde se insertara -- informacion a gardar
+			$database->insert("sector_exportacion",[
+				"img_se"=>$name_img,
+				"sector"=>htmlentities($txtNameSector),
+				"producto_exportado"=>htmlentities($txtProductoExportado),				
+				"mercado_exportacion"=>htmlentities($txtMercadoExportacion),
+				"total_fob"=>htmlentities($txtTotalFOB)				
+			]);
+			return $database->id();
+		}
 
 
-		/*emd Sector de Exportacion*/
+		/*end Sector de Exportacion*/
 		/*cx*/		
 	}
  ?>

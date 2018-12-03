@@ -132,38 +132,152 @@ try	{
 	/*end eliminar pom*/
 	/*save pom*/
 
-	$('.btnSavePom').on("click",function(){
-		var txtnamepom = $('.txtnamepom').val().trim()
-					self = this;
-		$.ajax({
-			type:"POST",
-			url: root + "res/php/admin_actions/save_pom.php",
-			data:{
-				txtnamepom: txtnamepom
-			},
-			beforeSend: function(){
-				$(self).addClass("loading");
-			},
-			success: function(data){
-				$(self).removeClass("loading");
-				if (data > 0) {
-					alert("Guardado correctamanente");
-					$('.txtnamepom').val("");//vaciar
+	$(".btnSavePom").on("click", function(e){
+		//evitar que se llame el formulario
+		e.preventDefault();	//prevenir funcionamiento normal de recargar toda la pagina	
+		var namepom = $('.txtnamepom').val().trim();//obteniendo infomracion del ckeditor
+			
 
-				}else{
-					alert("Hubo un error al guardar");
-				}
-			},
-			error: function(){
-				alert("Se ha producido un error");
+			//chequear q los campos no esten vacios
+			if(namepom !== "") {
+				//subir publicacion
+				//contiene toda la informacion del formulario
+				var formData = new FormData($("#new_posts_container")[0]);
+				//agregar descripcion con append
+				//formData.append("description",description);
+
+				$.ajax({
+					//xhr request de http
+					xhr: function(){
+						var xhr = new window.XMLHttpRequest();
+						//cada vez q avance el progreso esto se ejecuta
+						xhr.upload.addEventListener("progress", function(evt){
+							//lenghcomputable retorna verdadero o false
+							if (evt.lenghtComputable) {
+								var percentComplete = evt.loaded / evt.total;
+								percentComplete = parseInt(percentComplete * 100);
+								console.log(percentComplete);
+							}
+						},false);
+						return xhr;
+					},
+					type: "POST",
+					url: root + "res/php/admin_actions/save_pom.php",
+					data: formData,
+					processData: false,
+					contentType: false,
+					beforeSend: function(){
+						
+					},
+					success: function(data){
+						//vaciar cajas de texto
+						console.log(data);
+						$('.txtnamepom,.pom_file').val("");
+						//vaciar textarea - contenido post						
+						alert("Se subio el Archivo");
+					},
+					error: function(){
+						alert("Error");
+					}
+				});
+
+			}else{
+				alert("Llene todos los campos.");
 			}
-
-		});
 		
 	});
 	/*end save pom*/
-
 	/*end pom*/
+
+	/*sectores de exportacion*/
+	/*guardar sector de exportacion*/
+	$(".btnSaveSE").on("click", function(e){
+		//evitar que se llame el formulario
+		e.preventDefault();	//prevenir funcionamiento normal de recargar toda la pagina	
+		var sector = $('.txtNameSector').val().trim(),//obteniendo infomracion del ckeditor
+			producto_exportado = $('.txtProductoExportado').val().trim(),
+			mercado_exportacion=$('.txtMercadoExportacion').val().trim(),
+			total_fob=$('.txtTotalFOB').val().trim();
+			//chequear q los campos no esten vacios
+			if(sector !== "" && producto_exportado !== "" && mercado_exportacion !== "" && total_fob != "") {
+				//subir publicacion
+				//contiene toda la informacion del formulario
+				var formData = new FormData($("#new_posts_container")[0]);
+				//agregar descripcion con append
+				//formData.append("description",description);
+
+				$.ajax({
+					//xhr request de http
+					xhr: function(){
+						var xhr = new window.XMLHttpRequest();
+						//cada vez q avance el progreso esto se ejecuta
+						xhr.upload.addEventListener("progress", function(evt){
+							//lenghcomputable retorna verdadero o false
+							if (evt.lenghtComputable) {
+								var percentComplete = evt.loaded / evt.total;
+								percentComplete = parseInt(percentComplete * 100);
+								console.log(percentComplete);
+							}
+						},false);
+						return xhr;
+					},
+					type: "POST",
+					url: root + "res/php/admin_actions/save_se.php",
+					data: formData,
+					processData: false,
+					contentType: false,
+					beforeSend: function(){
+						
+					},
+					success: function(data){
+						//vaciar cajas de texto
+						console.log(data);
+						$('.txtNameSector,.txtProductoExportado,.txtMercadoExportacion,.txtTotalFOB,.image_file').val("");
+						//vaciar textarea - contenido post						
+						alert("Se subio la publicacion");
+					},
+					error: function(){
+						alert("Error");
+					}
+				});
+
+			}else{
+				alert("Llene todos los campos.");
+			}
+		
+	});
+	/*end guardar sector exportacion*/
+
+	/*eliminar sector*/
+	$(".tblSE").on("click",".btnRemoveSE",function(){
+		var id_se = $(this).attr("dataSEID")
+		self = this;
+		//console.log(se_id);
+
+		$.ajax({
+			type: "POST",
+			url: root + "res/php/admin_actions/delete_se.php",
+			data: {
+				id_se: id_se
+			},
+			//cuando regrese la respuesta de la peticion
+			success: function(data){
+				console.log(data);
+				if (data > 0) {
+					$(self).parent().parent().remove();//parent(td).parent(tr).remover
+					alert("Eliminado");
+
+				}else{
+					alert("Hubo un error.");
+				}				
+			},
+			error: function(){
+				alert("Se ha producido un error.");
+			}
+		});
+	});
+	/*end eliminar sector*/
+	/*end sectores de exportacion*/
 	/*end cx*/
 
 
