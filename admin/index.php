@@ -69,6 +69,14 @@
 		){
 			require '../views/admin/cx/sectores_exportacion.php';
 		}
+		//artesania
+		elseif(			
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="asociacionesartesanales"
+		){
+			require '../views/admin/art/asociacionesartesanales.php';
+		}
 
 
 	 ?>

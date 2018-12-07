@@ -1,4 +1,4 @@
-<div class="ui form agregar_pom_container" id="agregar_pom_container">
+<div class="ui form new_posts_container">
 	<form enctype="multipart/form-data" id="agregar_pom_container" class="ui form agregar_pom_container">
 		<h1>Planes Operativos de Mercado</h1>	
 		<p><b>Pa&iacute;s</b></p>

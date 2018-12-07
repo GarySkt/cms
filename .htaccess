@@ -10,10 +10,14 @@ RewriteRule ^admin/posts$ admin/index.php?section=posts [QSA]
 RewriteRule ^admin/categories$ admin/index.php?section=categories [QSA]
 RewriteRule ^admin/banner$ admin/index.php?section=banner [QSA]
 
+
 #Ruta administradores CX
 
 RewriteRule ^admin/pom$ admin/index.php?section=pom [QSA]
 RewriteRule ^admin/sectores_exportacion$ admin/index.php?section=sectores_exportacion [QSA]
+
+#Ruta administrador ART
+RewriteRule ^admin/asociacionesartesanales$ admin/index.php?section=asociacionesartesanales [QSA]
 
 #Ruta Usuarios - cadena de expresion regular para el id de publicaciones
 

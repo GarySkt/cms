@@ -45,6 +45,6 @@
 	){
 		//obtener contenido de asociaciones artesanales
 		$asoc_art = $user->getasoc_art();		
-	}
+	}	
 	
  ?>

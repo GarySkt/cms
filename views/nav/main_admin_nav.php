@@ -26,7 +26,7 @@
   <div class="ui simple dropdown item">
     <i class="paint brush icon"></i>Artesania
     <div class="menu">
-      <a href="pom" class="item">Planes Operativos de Mercado</a>      
+      <a href="asociacionesartesanales" class="item">Asociaciones Artesanales</a>      
     </div>    
   </div> 
   <div class="right menu">
