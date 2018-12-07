@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2018 a las 18:10:01
+-- Tiempo de generación: 07-12-2018 a las 15:21:35
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -42,6 +42,29 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`admin_id`, `username`, `email`, `password`, `created_at`) VALUES
 (1, 'admin', 'admin@admin.com', '$2y$10$d5CN1IctIIjEUOXjedMZAOIFOfy45ambh/xQCP7CNCE/YW3hWkRrK', '111');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `asociacion_artesanal`
+--
+
+CREATE TABLE `asociacion_artesanal` (
+  `id_aa` int(11) NOT NULL,
+  `nombre_aa` varchar(100) NOT NULL,
+  `presidente` varchar(100) NOT NULL,
+  `telefono` varchar(50) NOT NULL,
+  `direccion` varchar(150) NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `asociacion_artesanal`
+--
+
+INSERT INTO `asociacion_artesanal` (`id_aa`, `nombre_aa`, `presidente`, `telefono`, `direccion`, `email`) VALUES
+(1, 'Artesanos y Emprendedores de la Región Tacna', 'Fresia María Espinoza Molina', '052-318354 | 952-923625', 'Av. Circunvalación Nro.2161 C.P.M La Natividad', 'luzmarina_guzman_147@hotmail.com'),
+(2, 'nombre aa', 'presidnte', 'tele', 'direasdasd', 'eramsdas');
 
 -- --------------------------------------------------------
 
@@ -103,6 +126,7 @@ INSERT INTO `post` (`id_post`, `name`, `body`, `img_post`, `id_categoria`, `admi
 
 CREATE TABLE `sector_exportacion` (
   `id_se` int(11) NOT NULL,
+  `img_se` varchar(150) NOT NULL,
   `sector` varchar(100) NOT NULL,
   `producto_exportado` varchar(300) NOT NULL,
   `mercado_exportacion` varchar(300) NOT NULL,
@@ -113,13 +137,13 @@ CREATE TABLE `sector_exportacion` (
 -- Volcado de datos para la tabla `sector_exportacion`
 --
 
-INSERT INTO `sector_exportacion` (`id_se`, `sector`, `producto_exportado`, `mercado_exportacion`, `total_fob`) VALUES
-(1, 'Mineria', 'Minerales de cobre / Concentrados de cobre a granel / Oro / Concentrados de Zinc.', 'Brasil / Chile / China / Chile / Corea del Sur / España / India Japon / Mexico / Emiratos Arabes Unidos / Estados Unidos.', '1,140,721,422.71'),
-(2, 'Agricultura', 'Cafe', 'Alemania / Belgica / Canada / Chile / Dinamarca / Estados Unidos / Finlandia / Hungria / Irlanda / Japon / Holanda / Reino Unido / Republica Checa / Suiza.', '6,665,799.57'),
-(3, 'Agroindustria', 'Alcachofas / Maíz Blanco / Maíz Gigante de Cusco / Maíz Chulpi / Maíz Montaña / Cacao en grano / Cacao Orgánico / Cacao convencional / Aguaymanto deshidratado / Kiwicha / Chirimoyas frescas / Sal de Maras / Cañihua / Chía.', 'España / Estados Unidos / Holanda / Belgica / Canada / Japon / Italia / Alemania / Estados Unidos / Chile / Mexico / Ecuador / Rusia.', '14,249,196.71'),
-(4, 'Textil', 'Confecciones en Alpaca / Ovino / Algodón', 'Alemania / Australia / Austria / Chile / Dinamarca / España / Estados Unidos / Francia / Italia / México / Puerto Rico / Reino Unido / Suiza.', '1,568,343.34'),
-(5, 'Artesania', 'Nacimientos / Peletería / Cerámicas de animales / Artículos de decoración / Instrumentos Musicales / Bolsos / Monederos / Estuches / Cintillos / Bisutería.', 'Alemania / Australia / Bolivia / Chile / España / Estados Unidos / Francia / Italia / Mexico / Puerto Rico / Reino Unido / Austria / Suiza.', '768,760.43'),
-(6, 'Industria', 'Colorantes / Bolsas plásticas impresas / Andamios / Estructura para andamios / Contenedores / Retroexcavadora / Semirremolque / Cargador Frontal / Camiones / Tractores', 'Brasil / Canadá / Chile / Colombia / Egipto / España / Estados Unidos / Francia / Italia / India / Panamá / Suiza / México / Alemania.', '9,819,491.42');
+INSERT INTO `sector_exportacion` (`id_se`, `img_se`, `sector`, `producto_exportado`, `mercado_exportacion`, `total_fob`) VALUES
+(1, '', 'Mineria', 'Minerales de cobre / Concentrados de cobre a granel / Oro / Concentrados de Zinc.', 'Brasil / Chile / China / Chile / Corea del Sur / España / India Japon / Mexico / Emiratos Arabes Unidos / Estados Unidos.', '1,140,721,422.71'),
+(2, '', 'Agricultura', 'Cafe', 'Alemania / Belgica / Canada / Chile / Dinamarca / Estados Unidos / Finlandia / Hungria / Irlanda / Japon / Holanda / Reino Unido / Republica Checa / Suiza.', '6,665,799.57'),
+(3, '', 'Agroindustria', 'Alcachofas / Maíz Blanco / Maíz Gigante de Cusco / Maíz Chulpi / Maíz Montaña / Cacao en grano / Cacao Orgánico / Cacao convencional / Aguaymanto deshidratado / Kiwicha / Chirimoyas frescas / Sal de Maras / Cañihua / Chía.', 'España / Estados Unidos / Holanda / Belgica / Canada / Japon / Italia / Alemania / Estados Unidos / Chile / Mexico / Ecuador / Rusia.', '14,249,196.71'),
+(5, '', 'Artesania', 'Nacimientos / Peletería / Cerámicas de animales / Artículos de decoración / Instrumentos Musicales / Bolsos / Monederos / Estuches / Cintillos / Bisutería.', 'Alemania / Australia / Bolivia / Chile / España / Estados Unidos / Francia / Italia / Mexico / Puerto Rico / Reino Unido / Austria / Suiza.', '768,760.43'),
+(6, '', 'Industria', 'Colorantes / Bolsas plásticas impresas / Andamios / Estructura para andamios / Contenedores / Retroexcavadora / Semirremolque / Cargador Frontal / Camiones / Tractores', 'Brasil / Canadá / Chile / Colombia / Egipto / España / Estados Unidos / Francia / Italia / India / Panamá / Suiza / México / Alemania.', '9,819,491.42'),
+(12, '5c048cf29f2f8', 'Textil', 'Confecciones en Alpaca / Ovino / Algod&oacute;n', 'Alemania / Australia / Austria / Chile / Dinamarca / Espa&ntilde;a / Estados Unidos / Francia / Italia / M&eacute;xico / Puerto Rico / Reino Unido / Suiza.', '1,568,343.34');
 
 -- --------------------------------------------------------
 
@@ -199,7 +223,9 @@ INSERT INTO `tbl_uploads` (`id`, `name`, `file`, `type`, `size`) VALUES
 (8, 'JAPON', '14177-pdm-japon.pdf', 'application/pdf', 3632),
 (9, 'PANAMA', '54294-pdm-panama.pdf', 'application/pdf', 2434),
 (10, 'CHILE', '82386-pdm_chile.pdf', 'application/pdf', 11611),
-(11, 'TURQUIA', '34410-turquia.pdf', 'application/pdf', 11475);
+(11, 'TURQUIA', '34410-turquia.pdf', 'application/pdf', 11475),
+(13, '', '5c048f95a7b7f', '', 0),
+(14, '', '5c04902181510', '', 0);
 
 -- --------------------------------------------------------
 
@@ -255,6 +281,12 @@ INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasena`, `email`, `estado`)
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Indices de la tabla `asociacion_artesanal`
+--
+ALTER TABLE `asociacion_artesanal`
+  ADD PRIMARY KEY (`id_aa`);
 
 --
 -- Indices de la tabla `categoria`
@@ -314,6 +346,11 @@ ALTER TABLE `usuario`
 ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT de la tabla `asociacion_artesanal`
+--
+ALTER TABLE `asociacion_artesanal`
+  MODIFY `id_aa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
@@ -327,7 +364,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT de la tabla `sector_exportacion`
 --
 ALTER TABLE `sector_exportacion`
-  MODIFY `id_se` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_se` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `slider`
 --
@@ -337,7 +374,7 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT de la tabla `tbl_uploads`
 --
 ALTER TABLE `tbl_uploads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
