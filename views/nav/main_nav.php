@@ -71,7 +71,7 @@
       </div>      
       <a href="https://www.mincetur.gob.pe/turismo/lineas-de-intervencion/desarrollo-de-la-artesania/reconocimientos-y-concursos/" class="item" target="_blank">Reconocimientos, Concursos y Eventos</a>
       <a href="https://artesanosdetacna.wordpress.com/" target="_blank" class="item">Artesanos de Tacna</a>
-      <a href="#" class="item">Asociaciones Artesanales</a>
+      <a href="http://localhost/cms/asociaciones_artesanales" class="item">Asociaciones Artesanales</a>
       <a href="#" class="item">Lineas Artesanales</a>
       <a href="http://localhost/cms/rna" class="item">Registro Nacional del Artesano</a> 
     </div>
@@ -79,8 +79,9 @@
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
     <i class="info icon"></i>Datos Generales
     <div class="menu">
-      <a href="#" class="item">Directorio institucional</a>
-      <a href="#" class="item">Formato de solicitud de acceso a la informacion publica</a>         
+      <a href="http://localhost/cms/directorio" class="item">Directorio institucional</a>
+
+      <a href="../cms/res/pdf/solicitudaccesoip.pdf" target="_blank" class="item">Formato de solicitud de acceso a la informacion publica</a>         
     </div>
   </div>  
   <a href="#" class="item" style="color:#FFFFFF;">

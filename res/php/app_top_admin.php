@@ -37,8 +37,14 @@
 		isset($_GET['section']) &&
 		$_GET['section']=="sectores_exportacion"
 	){
-		//obtener contenido de publicacion
+		//obtener contenido de 
 		$se = $user->getSectorExportacion();		
+	}elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="asociaciones_artesanales"
+	){
+		//obtener contenido de asociaciones artesanales
+		$asoc_art = $user->getasoc_art();		
 	}
 	
  ?>

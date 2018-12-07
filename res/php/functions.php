@@ -115,7 +115,22 @@
 		}
 		/* end Sectores de Exportacion*/
 		/*end CX*/
+		/*ARTESANIA*/
 		
+		public function getasoc_art(){
+			global $database;
+
+			$asoc_art = $database->select("asociacion_artesanal",[
+				"id_aa",
+				"nombre_aa",
+				"presidente",
+				"telefono",
+				"direccion",
+				"email"
+			]);
+			return $asoc_art;			
+		}
+		/*END ARTESANIA*/
 
 		public function getPostInfo($id_post){
 
@@ -145,7 +160,7 @@
 			return $database->id();
 		}
 	}
-
+/*-----ACCIONES ADMINISTRADOR-----*/
 	class Admin_Actions{
 		public function logIn($username_email, $pass){
 			//esta variable esta en init.php

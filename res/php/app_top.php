@@ -27,4 +27,13 @@
 		$se = $user->getSectorExportacion();		
 	}
 
+
+	elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="asociaciones_artesanales"
+	){
+		//obtener contenido de publicacion
+		$asoc_art = $user->getasoc_art();		
+	}
+
  ?>

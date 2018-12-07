@@ -62,7 +62,18 @@
 			$_GET['section']=="fines"
 		){
 			require 'views/main_nav/fines.php';
-		}
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="directorio"
+		){
+			require 'views/main_nav/directorio.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="asociaciones_artesanales"
+		){
+			require 'views/main_nav/art/asociaciones_artesanales.php';
+		}		
+
 //-----------------------COMERCIO EXTERIOR------------------------//
 		elseif(
 			isset($_GET['section']) &&

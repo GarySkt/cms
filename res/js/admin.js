@@ -135,17 +135,12 @@ try	{
 	$(".btnSavePom").on("click", function(e){
 		//evitar que se llame el formulario
 		e.preventDefault();	//prevenir funcionamiento normal de recargar toda la pagina	
-		var namepom = $('.txtnamepom').val().trim();//obteniendo infomracion del ckeditor
-			
-
+		var namepom = $('.txtnamepom').val().trim();
 			//chequear q los campos no esten vacios
 			if(namepom !== "") {
 				//subir publicacion
 				//contiene toda la informacion del formulario
-				var formData = new FormData($("#new_posts_container")[0]);
-				//agregar descripcion con append
-				//formData.append("description",description);
-
+				var formData = new FormData($("#new_posts_container")[0]);				
 				$.ajax({
 					//xhr request de http
 					xhr: function(){
@@ -166,8 +161,7 @@ try	{
 					data: formData,
 					processData: false,
 					contentType: false,
-					beforeSend: function(){
-						
+					beforeSend: function(){						
 					},
 					success: function(data){
 						//vaciar cajas de texto
