@@ -274,6 +274,68 @@ try	{
 	/*end sectores de exportacion*/
 	/*end cx*/
 
+	/*Artesania*/
+	/*Asociaciones Artesanales*/
+
+$(".btnSaveAsocArt").on("click", function(e){
+		//evitar que se llame el formulario
+		e.preventDefault();	//prevenir funcionamiento normal de recargar toda la pagina	
+		var asociacion = $('.txtAsociacion').val().trim(),//obteniendo infomracion del ckeditor
+			presidente = $('.txtPresidente').val().trim(),
+			telefono=$('.txtTelefono').val().trim(),
+			direccion=$('.txtDireccion').val().trim(),
+			email=$('.txtEmail').val().trim();
+			//chequear q los campos no esten vacios
+			if(asociacion !== "" && presidente !== "" && telefono !== "" && direccion != "" && email != "") {
+				//subir publicacion
+				//contiene toda la informacion del formulario
+				var formData = new FormData($("#new_posts_container")[0]);
+				//agregar descripcion con append
+				//formData.append("description",description);
+
+				$.ajax({
+					//xhr request de http
+					xhr: function(){
+						var xhr = new window.XMLHttpRequest();
+						//cada vez q avance el progreso esto se ejecuta
+						xhr.upload.addEventListener("progress", function(evt){
+							//lenghcomputable retorna verdadero o false
+							if (evt.lenghtComputable) {
+								var percentComplete = evt.loaded / evt.total;
+								percentComplete = parseInt(percentComplete * 100);
+								console.log(percentComplete);
+							}
+						},false);
+						return xhr;
+					},
+					type: "POST",
+					url: root + "res/php/admin_actions/save_asocart.php",
+					data: formData,
+					processData: false,
+					contentType: false,
+					beforeSend: function(){
+						
+					},
+					success: function(data){
+						//vaciar cajas de texto
+						console.log(data);
+						$('.txtAsociacion,.txtPresidente,.txtTelefono,.txtDireccion,.txtEmail').val("");
+						//vaciar textarea - contenido post						
+						alert("Se agrego la Asociacion Artesanal");
+					},
+					error: function(){
+						alert("Error");
+					}
+				});
+
+			}else{
+				alert("Llene todos los campos.");
+			}
+		
+	});
+	/*End Asociaciones Artesanales*/
+	/*End Artesania*/
+
 
 	$(".btnSavePost").on("click", function(e){
 		//evitar que se llame el formulario

@@ -13,16 +13,13 @@
 
 </head>
 <body>
+	<!--------------Navbar---------------->
+	<?php require 'views/nav/new_main_nav.php'; ?>
 	<!--------------BANNER---------------->
-	<div class="background_main">
-		<div class="overlay">			
-		</div>
-		<hi class="main_title">
-			DIRCETUR
-		</hi>	
-	</div>
 	
-	<?php require 'views/nav/main_nav.php'; ?>
+	<?php require 'views/slider.php'; ?>
+	<!--------------End BANNER---------------->
+	
 	<!-- si no hay una seccion seleccionada aparecera esto-->
 	<?php 
 		if(!isset($_GET['section'])) {

@@ -290,6 +290,23 @@
 
 
 		/*end Sector de Exportacion*/
-		/*cx*/		
+		/*cx*/	
+
+		/*Artesania*/
+		/*Asociaciones Artesanales*/
+		public function saveAsocArt($txtAsociacion,$txtPresidente,$txtTelefono,$txtDireccion,$txtEmail){
+			global $database;
+			//tabladonde se insertara -- informacion a gardar
+			$database->insert("asociacion_artesanal",[
+				"nombre_aa"=>htmlentities($txtAsociacion),
+				"presidente"=>htmlentities($txtPresidente),
+				"telefono"=>htmlentities($txtTelefono),				
+				"direccion"=>htmlentities($txtDireccion),
+				"email"=>htmlentities($txtEmail)				
+			]);
+			return $database->id_aa();
+		}
+		/*End Asociaciones Artesanales*/
+		/*End Artesania*/
 	}
  ?>

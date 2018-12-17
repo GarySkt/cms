@@ -1,5 +1,10 @@
 
 body{
+	background-image: url("../img/pattern.png"); 	
+}
+
+/*
+body{
 	background: url("../img/3132.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -9,10 +14,28 @@ body{
 	margin: 10px;
 }
 
+*/
+#elcontenedor{
+	position: relative;
+}
+#ellogo{	
+    width: 180px;
+    height: auto;  
+    background-color:rgba(0, 0, 0, 0);   
+}
+#labarra{
+	position: absolute;
+    z-index: 100;    
+    background-color:rgba(0, 0, 0, 0);   
+}
+#elslider{
+	position: relative;
+	z-index: 50;
+}
 .background_main{
 	background-image: url("../img/backg.jpg");
 	width: 100%;	
-	height: 50vh;
+	height: 80vh;
 	background-size: cover;
 	background-position: bottom;
 	position: relative;
@@ -36,8 +59,10 @@ body{
 }
 .post_container{
 	border: 1px solid #666;
+	border-color: #fff;
 	border-radius: 5px;
-	padding: 5px;
+	
+	background-color: #fff;
 }
 .post_img{
 	width: 100%;
@@ -48,11 +73,13 @@ body{
 	width: 100%;
 	text-align: center;
 	margin-top: 5px;
+	color: #555;
 }
 .post_date{
 	width: 100%;
 	text-align: center;
 	margin-top: 5px;
+	color: #B3B3B3;
 }
 
 /*LOGIN ADMIN*/
