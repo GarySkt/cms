@@ -29,9 +29,9 @@ RewriteRule ^dircetur$ index.php?section=dircetur [QSA]
 
 #main_nav
 
-RewriteRule ^misionvision$ index.php?section=misionvision [QSA]
-RewriteRule ^competencianaturaleza$ index.php?section=competencianaturaleza [QSA]
-RewriteRule ^fines$ index.php?section=fines [QSA]
+RewriteRule ^organo_direccion$ index.php?section=organo_direccion [QSA]
+RewriteRule ^organo_asesoramiento_apoyo$ index.php?section=organo_asesoramiento_apoyo [QSA]
+RewriteRule ^organizacion$ index.php?section=organizacion [QSA]
 RewriteRule ^cx$ index.php?section=cx [QSA]
 RewriteRule ^directorio$ index.php?section=directorio [QSA]
 
@@ -39,6 +39,7 @@ RewriteRule ^directorio$ index.php?section=directorio [QSA]
 RewriteRule ^objetivos_funciones$ index.php?section=objetivos_funciones [QSA]
 RewriteRule ^pom$ index.php?section=pom [QSA]
 RewriteRule ^sectores_exportacion$ index.php?section=sectores_exportacion [QSA]
+RewriteRule ^analisisexportacion$ index.php?section=analisisexportacion [QSA]
 
 #art
 RewriteRule ^objetivos_funciones_art$ index.php?section=objetivos_funciones_art [QSA]
@@ -46,7 +47,7 @@ RewriteRule ^rna$ index.php?section=rna [QSA]
 RewriteRule ^asociaciones_artesanales$ index.php?section=asociaciones_artesanales [QSA]
 
 #dta
-RewriteRule ^objetivos_dta$ index.php?section=objetivos_dta [QSA]
-RewriteRule ^funciones_dta$ index.php?section=funciones_dta [QSA]
+RewriteRule ^objetivos_funciones_dta$ index.php?section=objetivos_funciones_dta [QSA]
+RewriteRule ^directorio_dta$ index.php?section=directorio_dta [QSA]
 
 

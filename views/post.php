@@ -1,8 +1,8 @@
-
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
 <div class="post_main_body">
 	<div class="post_main_img">
-		<img src="../res/img/img_post/<?php echo $post[0]["img_post"];?>.png" alt="<?php echo $post[0]["name"];?>">
-	</div>
+		<img class="img-fluid" src="../res/img/img_post/<?php echo $post[0]["img_post"];?>.png" alt="<?php echo $post[0]["name"];?>">
+	</div></br>
 	<h1>
 		<?php echo $post[0]["name"];?>
 		<?php if(isset($_SESSION["user"])):?>

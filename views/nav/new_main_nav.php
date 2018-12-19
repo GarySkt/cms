@@ -5,34 +5,42 @@
     <div class="item">
   <img src="res/img/blancoconrojo.png" id="ellogo" alt="">  
   </div>
-    <a href="index.php" class="item" style="color:#FFFFFF;">
-    </i>Inicio
-  </a>  
+    <a href="/cms/index.php" class="item" style="color:#FFFFFF;">
+    Inicio
+    </a>  
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
     <a href="http://localhost/cms/dircetur" style="color:#FFFFFF;">
       Institucional</a>      
       <div class="menu">      
-        <a href="http://localhost/cms/misionvision" class="item">Mision y Vision</a>
-        <a href="http://localhost/cms/competencianaturaleza" class="item">Competencia y naturaleza</a>
-        <a href="http://localhost/cms/fines" class="item">Fines</a>      
         <div class="ui simple dropdown item">
           Funciones<i class="angle right icon"></i>
           <div class="menu">
-            <a href="#" class="item">Organo de direccion</a>
-            <a href="#" class="item">Organo de asesoramiento y apoyo</a>
-            <a href="#" class="item">Organos de Linea</a>
+            <a href="/cms/organo_direccion" class="item">Organo de direccion</a>
+            <a href="/cms/organo_asesoramiento_apoyo" class="item">Organo de asesoramiento y apoyo</a>            
           </div>        
         </div>
-        <a href="#" class="item">Organizacion</a>
-        <a href="#" class="item">Transparencia</a>
+        <a href="organizacion" class="item">Organizaci&oacute;n</a>        
       </div>
     </div>
     <div class="ui simple dropdown item" style="color:#FFFFFF;">
       Gestion
       <div class="menu">
         <a href="#" class="item">Actividades Oficiales</a>
-        <a href="#" class="item">Planeamiento y Organizacion</a>
-        <a href="#" class="item">Informacion Presupuestal</a>
+        <div class="ui simple dropdown item">
+          Planeamiento<i class="angle right icon"></i>
+          <div class="menu">
+            <a href="res/pdf/planeamiento/" class="item">Plan Estrategico Institucional</a>
+            <a href="res/pdf/planeamiento/poi.pdf" class="item">Plan Operativo Institucional</a>            
+          </div>        
+        </div>
+        <div class="ui simple dropdown item">
+          Informaci&oacute; Presupuestal<i class="angle right icon"></i>
+          <div class="menu" style="width: 150%;">
+            <a href="res/pdf/Presupuesto/REMUNERACION-PERSONAL-ACTIVO-CESANTE-DIRCETUR.pdf" target="_blank" class="item">Remuneracion de Funcionarios y Personal</a>
+            <a href="res/pdf/Presupuesto/PIA2015.pdf" target="_blank" class="item">Presupuesto Institucional de Apertura</a>        <a href="res/pdf/Presupuesto/planeamiento/" target="_blank" class="item">Presupuesto Institucional de Modificado</a>
+            <a href="res/pdf/Presupuesto/PRE_INS_2014.pdf" target="_blank" class="item">Presupuesto Ejecutado</a>
+          </div>        
+        </div>        
       </div>    
     </div>  
     <div class="ui simple dropdown item">    
@@ -42,17 +50,17 @@
           <a href="http://localhost/cms/objetivos_funciones" class="item">Objetivos y Funciones</a>      
           <a href="http://localhost/cms/pom" class="item">Planes Operativos de Mercado</a>
           <a href="http://localhost/cms/sectores_exportacion" class="item">Sectores de Exportacion</a>
-          <a href="#" class="item">Analisis de Exportaciones</a>
-          <a href="#" class="item">PERX</a>
+          <a href="/cms/analisisexportacion" class="item">Analisis de Exportaciones</a>
+          <a href="res/pdf/perx/Plan%20Regional%20Exportador%20-%20PERX%20Tacna%20-%2009.11.17%20%281%29.pdf" target="_blank" class="item">PERX</a>
         </div>
       </div> 
       <div class="ui simple dropdown item" style="color:#FFFFFF;">
         Turismo
         <div class="menu">
-          <a href="http://localhost/cms/objetivos_dta" class="item">Objetivos</a>
-          <a href="http://localhost/cms/funciones_dta" class="item">Funciones</a>
+          <a href="/cms/objetivos_funciones_dta" class="item">Objetivos y Funciones</a>          
           <div class="ui simple dropdown item">
-            Directorio de Empresas turisticas<i class="angle right icon"></i> 
+            <a href="/cms/directorio_dta" >Directorio de Empresas Turisticas</a>
+            <i class="angle right icon"></i> 
             <div class="menu">
               <a class="item" href="">Agencia de Viajes y Turismo</a>
               <a class="item" href="">Restaurantes</a>

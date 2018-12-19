@@ -2,13 +2,13 @@
 	<div class="title">
 		<h1>Objetivos</h1>		
 	</div>
-<h2>Objetivos Generales</h2>
+<h2 class="ui red header">Objetivos Generales</h2>
 <div class="ui bulleted list">
 	<div class="item">Promocionar las Exportaciones</div>
 	<div class="item">Desarrollar el Comercio Exterior</div>
 	<div class="item">Difundir las ventajas y beneficios de los acuerdos comerciales vigentes.</div>
 </div>
-<h2>Objetivos Especificos</h2>
+<h2 class="ui red header">Objetivos Especificos</h2>
 <div class="ui bulleted list">
 	<div class="item">Lograr la inserción competitiva de los bienes y servicios regionales en los mercados internacionales.</div>
 	<div class="item">Desarrollar la oferta exportable.</div>

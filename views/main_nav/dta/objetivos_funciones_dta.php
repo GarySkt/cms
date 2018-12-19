@@ -1,5 +1,15 @@
 <div class="ui raised very padded text container segment" align="justify">
-	<h1 class="title">Funciones</h1>
+	<h1 class="ui red header" style="font-size: 250%">Objetivos</h1>
+	<hr>
+	<div class="ui bulleted list">
+		<div class="item">Alcanzar un Turismo Sostenible como herramienta de desarrollo económico, social y ambiental del Perú.</div>
+		<div class="item">Promover la Cultura Turística y la Seguridad para el visitante.</div>
+		<div class="item">Desarrollar una Oferta Turística Competitiva y Sostenible.</div>
+		<div class="item">Promover una Demanda Sostenible del Turismo.</div>
+		<div class="item">Fortalecer las capacidades de la Instituciones vinculadas con la actividad turística.</div>		
+	</div>	
+	<h1 class="ui red header" style="font-size: 250%">Funciones</h1>
+	<hr>
 	<div class="ui bulleted list">
 			<div class="item">Proponer y ejecutar las políticas en materia de desarrollo de la actividad turstica y artesanal regional.</div>
 			<div class="item">Proponer y ejecutar las estrategias y programas de desarrollo turístico, la oferta exportable y de promoción de los productos artesanales de la región.</div>

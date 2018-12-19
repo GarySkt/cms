@@ -46,19 +46,19 @@
 			require 'views/main_nav/dircetur.php';
 		}elseif(
 			isset($_GET['section']) &&
-			$_GET['section']=="misionvision"
+			$_GET['section']=="organo_direccion"
 		){
-			require 'views/main_nav/misionvision.php';
+			require 'views/main_nav/dircetur/organo_direccion.php';
 		}elseif(
 			isset($_GET['section']) &&
-			$_GET['section']=="competencianaturaleza"
+			$_GET['section']=="organo_asesoramiento_apoyo"
 		){
-			require 'views/main_nav/competencianaturaleza.php';
+			require 'views/main_nav/dircetur/organo_asesoramiento_apoyo.php';
 		}elseif(
 			isset($_GET['section']) &&
-			$_GET['section']=="fines"
+			$_GET['section']=="organizacion"
 		){
-			require 'views/main_nav/fines.php';
+			require 'views/main_nav/dircetur/organizacion.php';
 		}elseif(
 			isset($_GET['section']) &&
 			$_GET['section']=="directorio"
@@ -92,6 +92,11 @@
 			$_GET['section']=="sectores_exportacion"
 		){
 			require 'views/main_nav/cx/sectores_exportacion.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="analisisexportacion"
+		){
+			require 'views/main_nav/cx/analisisexportacion.php';
 		}
 //-----------------------ARTESANIA------------------------//
 		elseif(
@@ -108,15 +113,16 @@
 //---------------------TURISMO---------------------------//		
 		elseif(
 			isset($_GET['section']) &&
-			$_GET['section']=="objetivos_dta"
+			$_GET['section']=="objetivos_funciones_dta"
 		){
-			require 'views/main_nav/dta/objetivos_dta.php';
+			require 'views/main_nav/dta/objetivos_funciones_dta.php';
 		}elseif(
 			isset($_GET['section']) &&
-			$_GET['section']=="funciones_dta"
+			$_GET['section']=="directorio_dta"
 		){
-			require 'views/main_nav/dta/funciones_dta.php';
+			require 'views/main_nav/dta/directorio_dta.php';
 		}
+
 
 	 ?>
 	 
