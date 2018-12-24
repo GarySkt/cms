@@ -1,5 +1,5 @@
-<form enctype="multipar/form-data" id="new_posts_container" class="ui form new_posts_container">
-	<h1>Nueva Publicaci&oacute;n</h1>
+<form enctype="multipar/form-data" id="new_posts_container" class="ui form new_posts_container" style="color: red;">
+	<h1 class="ui red header">Nueva Publicaci&oacute;n</h1>
 	<p><b>Nombre de la publicaci&oacute;n</b></p>
 	<div class="ui input">
 		<input type="text" class="txtNamePost" name="txtNamePost" placeholder="Nombre de la publicaci&oacute;n">

@@ -9,7 +9,10 @@
 	<link rel="stylesheet" href="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://localhost/cms/res/css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="icon" type="image/png" href="res/img/escudo.png">	
+
+	
 
 </head>
 <body>
@@ -64,12 +67,7 @@
 			$_GET['section']=="directorio"
 		){
 			require 'views/main_nav/directorio.php';
-		}elseif(
-			isset($_GET['section']) &&
-			$_GET['section']=="asociaciones_artesanales"
-		){
-			require 'views/main_nav/art/asociaciones_artesanales.php';
-		}		
+		}	
 
 //-----------------------COMERCIO EXTERIOR------------------------//
 		elseif(
@@ -109,6 +107,16 @@
 			$_GET['section']=="rna"
 		){
 			require 'views/main_nav/art/rna.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="asociaciones_artesanales"
+		){
+			require 'views/main_nav/art/asociaciones_artesanales.php';
+		}elseif(
+			isset($_GET['section']) &&
+			$_GET['section']=="artesania"
+		){
+			require 'views/main_nav/art/artesania.php';
 		}
 //---------------------TURISMO---------------------------//		
 		elseif(
@@ -128,7 +136,7 @@
 	 
 	 <?php require 'views/nav/footer.php';?>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
 	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.js"></script>
 	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.js"></script>
 	<script src="http://localhost/cms/res/js/main.js"></script>

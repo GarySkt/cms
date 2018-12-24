@@ -393,5 +393,50 @@ $(".btnSaveAsocArt").on("click", function(e){
 		console.log(description);
 	});
 
+	//delete post
+	$(".tblPosts").on("click",".btnRemovePost",function(){
+		var id_post = $(this).attr("dataPostID")
+					self = this;
+		//console.log(category_id);
+
+		$.ajax({
+			type: "POST",
+			url: root + "res/php/admin_actions/delete_post.php",
+			data: {
+				id_post: id_post
+			},
+			//cuando regrese la respuesta de la peticion
+			success: function(data){
+				console.log(data);
+				if (data > 0) {
+					$(self).parent().parent().remove();				
+					alert("Eliminado");
+
+				}else{
+					alert("Hubo un error.");
+
+				}				
+			},
+			error: function(){
+				alert("Se ha producido un error.");
+			}
+		});
+	});
+	
+	//end delete post
+	//new list grid btn
+	document.getElementById("btnNewPost").onclick = function () {
+        location.href = "new_post";
+    };
+     document.getElementById("btnListPosts").onclick = function () {
+        location.href = "all_posts_list";
+    };
+
+    document.getElementById("btnGridPosts").onclick = function () {
+        location.href = "all_posts";
+    };
+    //end new list grid btn
+
+
 	
 });

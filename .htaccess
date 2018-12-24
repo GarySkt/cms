@@ -4,11 +4,17 @@ RewriteEngine on
 RewriteRule ^log-out$ res/php/user_actions/log-out.php [QSA]
 # [QSA] para mandar valores
 
+
+
 #Ruta administradores
 
+RewriteRule ^admin/new_post$ admin/index.php?section=new_post [QSA]
+RewriteRule ^admin/all_posts$ admin/index.php?section=all_posts [QSA]
+RewriteRule ^admin/all_posts_list$ admin/index.php?section=all_posts_list [QSA]
 RewriteRule ^admin/posts$ admin/index.php?section=posts [QSA]
 RewriteRule ^admin/categories$ admin/index.php?section=categories [QSA]
 RewriteRule ^admin/banner$ admin/index.php?section=banner [QSA]
+RewriteRule ^admin/manual_admin$ admin/index.php?section=manual_admin [QSA]
 
 
 #Ruta administradores CX
@@ -24,6 +30,9 @@ RewriteRule ^admin/asociacionesartesanales$ admin/index.php?section=asociaciones
 RewriteRule ^post/([0-9]+)$ index.php?section=post&id_post=$1 [QSA]
 RewriteRule ^register$ index.php?section=register [QSA]
 RewriteRule ^log-in$ index.php?section=log-in [QSA]
+
+RewriteRule ^index$ index.php?section=index [QSA]
+
 RewriteRule ^home$ index.php?section=home [QSA]
 RewriteRule ^dircetur$ index.php?section=dircetur [QSA]
 
@@ -42,6 +51,7 @@ RewriteRule ^sectores_exportacion$ index.php?section=sectores_exportacion [QSA]
 RewriteRule ^analisisexportacion$ index.php?section=analisisexportacion [QSA]
 
 #art
+RewriteRule ^artesania$ index.php?section=artesania [QSA]
 RewriteRule ^objetivos_funciones_art$ index.php?section=objetivos_funciones_art [QSA]
 RewriteRule ^rna$ index.php?section=rna [QSA]
 RewriteRule ^asociaciones_artesanales$ index.php?section=asociaciones_artesanales [QSA]

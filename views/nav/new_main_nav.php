@@ -1,6 +1,6 @@
 <div id="elcontenedor">
     
-  <div class="ui menu navbar" id="labarra" style="margin-bottom: 0px; ">
+  <div class="ui text menu navbar" id="labarra" style="margin-bottom: 0px; ">
   <div class="right menu">
     <div class="item">
   <img src="res/img/blancoconrojo.png" id="ellogo" alt="">  
@@ -47,10 +47,9 @@
       <a href="http://localhost/cms/cx" style="color:#FFFFFF;">
         Comercio Exterior</a>    
         <div class="menu">
-          <a href="http://localhost/cms/objetivos_funciones" class="item">Objetivos y Funciones</a>      
-          <a href="http://localhost/cms/pom" class="item">Planes Operativos de Mercado</a>
-          <a href="http://localhost/cms/sectores_exportacion" class="item">Sectores de Exportacion</a>
-          <a href="/cms/analisisexportacion" class="item">Analisis de Exportaciones</a>
+          <a href="objetivos_funciones" class="item">Objetivos y Funciones</a>                
+          <a href="sectores_exportacion" class="item">Sectores de Exportacion</a>
+          <a href="analisisexportacion" class="item">Analisis de Exportaciones</a>
           <a href="res/pdf/perx/Plan%20Regional%20Exportador%20-%20PERX%20Tacna%20-%2009.11.17%20%281%29.pdf" target="_blank" class="item">PERX</a>
         </div>
       </div> 
@@ -59,7 +58,7 @@
         <div class="menu">
           <a href="/cms/objetivos_funciones_dta" class="item">Objetivos y Funciones</a>          
           <div class="ui simple dropdown item">
-            <a href="/cms/directorio_dta" >Directorio de Empresas Turisticas</a>
+            Directorio de Empresas Turisticas
             <i class="angle right icon"></i> 
             <div class="menu">
               <a class="item" href="">Agencia de Viajes y Turismo</a>
@@ -71,8 +70,9 @@
           <a href="#" class="item">Recursos turisticos</a>   
         </div>
       </div>
-      <div class="ui simple dropdown item" style="color:#FFFFFF;">
-        Artesania
+      <div class="ui simple dropdown item">
+        <a href="artesania" style="color:#FFFFFF;">
+        Artesania</a>        
         <div class="menu">
           <a href="http://localhost/cms/objetivos_funciones_art" class="item">Objetivos y Funciones</a>      
           <div class="ui simple dropdown item">

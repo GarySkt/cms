@@ -2,6 +2,9 @@
 body{
 	background-image: url("../img/pattern.png"); 	
 }
+#background_artesania{
+	background-image: url("res/img/textura_textil.PNG"); 		
+}
 
 /*
 body{
@@ -25,8 +28,8 @@ body{
 }
 #labarra{
 	position: absolute;
-    z-index: 100;    
-    background-color:rgba(0, 0, 0, 0);   
+    z-index: 100;        
+    background-color:rgba(0, 0, 0, 0.1);   
 }
 
 

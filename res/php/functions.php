@@ -22,6 +22,22 @@
 			}			
 		}
 
+		public function getSlider(){
+					global $database;
+					$slider = $database->select("slider",[
+						"id",
+						"comment",
+						"img",
+						"link"
+					],[
+						"OR"=>[
+							"estado"=>"A"
+						]
+					]);
+					return $slider;
+
+				}
+
 
 		public function getProfile($session){
 			global $database;
@@ -135,7 +151,6 @@
 		public function getPostInfo($id_post){
 
 			global $database;
-
 			$posts = $database->select("post",[
 				//unir tabla post con categoria 
 				"[>]categoria"=>["id_categoria"=>"id"]
@@ -158,6 +173,21 @@
 				"post_id"=>$post_id
 			]);
 			return $database->id();
+		}
+
+		public function getAllPosts(){
+			global $database;
+
+			$AllPost = $database->select("post",[
+				"id_post",
+				"name",
+				"body",
+				"img_post",
+				"id_categoria",
+				"admin_id",
+				"created_at"
+			]);
+			return $AllPost;
 		}
 	}
 /*-----ACCIONES ADMINISTRADOR-----*/
@@ -238,6 +268,15 @@
 				"created_at"=>time()
 			]);
 			return $database->id();
+		}
+
+		public function deletePost($id_post){
+			global $database;
+			
+			$delete=$database->delete("post",[
+				"id_post"=>htmlentities($id_post)
+			]);
+			return $delete->rowCount();
 		}
 
 		/*end post*/

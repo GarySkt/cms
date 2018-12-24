@@ -9,7 +9,7 @@
 		//si hay una seccion seleccionada
 		isset($_GET['section'])&&
 		//y es posts
-		$_GET['section']=="posts"
+		$_GET['section']=="new_post"
 	) {
 		//obtener categorias de la DB
 		$categories=$admin->getCategories();
@@ -46,5 +46,23 @@
 		//obtener contenido de asociaciones artesanales
 		$asoc_art = $user->getasoc_art();		
 	}	
+
+	elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="all_posts"
+	){
+		//obtener contenido pom
+		$AllPost = $user->getAllPosts();		
+	}
+
+	elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="all_posts_list"
+	){
+		//obtener contenido pom
+		$AllPost = $user->getAllPosts();		
+	}
+
+
 	
  ?>

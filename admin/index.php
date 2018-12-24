@@ -35,11 +35,40 @@
 			//si la sesion esta iniciada y  hay vista seleccionada
 			isset($_SESSION['admin']) && 
 			isset($_GET['section']) &&
-			$_GET['section']=="posts"
+			$_GET['section']=="new_post"
 		){
-			require '../views/admin/posts.php';
+			require '../views/admin/new_post.php';
 
+		}
+		elseif(
+			//si la sesion esta iniciada y  hay vista seleccionada
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="all_posts"			
+		){
+			require '../views/admin/all_post.php';			
 		}elseif(
+			//si la sesion esta iniciada y  hay vista seleccionada
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="all_posts_list"			
+		){
+			
+			require '../views/admin/all_post_list.php';
+		}
+		elseif(
+			//si la sesion esta iniciada y  hay vista seleccionada
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="manual_admin"			
+		){
+			
+			require '../views/admin/manual_admin.php';
+		}
+
+
+
+		elseif(
 			//si la sesion esta iniciada y  hay vista seleccionada
 			isset($_SESSION['admin']) && 
 			isset($_GET['section']) &&

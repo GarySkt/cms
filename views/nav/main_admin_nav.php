@@ -1,5 +1,5 @@
 <div class="ui pointing menu" style="margin-bottom: 0px;">
-  <a href="../admin/posts" class="item">
+  <a href="all_posts" class="item">
     Publicaci&oacute;n
   </a>
   <a href="categories" class="item">
@@ -30,6 +30,9 @@
     </div>    
   </div> 
   <div class="right menu">
+    <a href="manual_admin" class="item">
+      Manual
+    </a>
     <a href="http://localhost/cms/log-out" class="item">
       Cerrar Sesi&oacute;n
     </a>
