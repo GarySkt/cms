@@ -13,7 +13,7 @@
     <div class="menu">
       <a href="pom" class="item">Planes Operativos de Mercado</a>      
       <a href="sectores_exportacion" class="item">Sectores de Exportaci&oacute;n</a> 
-      <a href="pom" class="item">Analisis de Exportaciones</a>
+      <a href="analisis_exportacion" class="item">Analisis de Exportaciones</a>
       <a href="pom" class="item">PERX</a>
     </div>    
   </div>  

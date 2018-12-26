@@ -17,7 +17,7 @@
 	<div class="ui three stackable cards">
 		<?php foreach($pom as $pom): ?>
 		<div class="card" style="text-align: center; padding: 10px;">
-			<a class="" style="color: #FF0000" href="res/php/admin_actions/uploads/<?php echo $pom['file'] ?>" target="_blank"><?php echo $pom['name'] ?></a>
+			<a class="" style="color: #FF0000" href="res/pdf/pom/<?php echo $pom['file'] ?>" target="_blank"><?php echo $pom['name'] ?></a>
 		</div>
 	<?php endforeach; ?>
 	</div>

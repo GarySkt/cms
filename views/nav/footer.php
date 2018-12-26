@@ -4,7 +4,7 @@
            
     </div>
     <div class="ui section divider"></div>
-    <img src="../cms/res/img/logodirceturcolor.png" class="ui centered large image">
+    <img src="/cms/res/img/logodirceturcolor.png" class="ui centered large image">
     <div class="four wide right">
     <br>        
         <div class="ui horizontal link list item">

@@ -5,7 +5,7 @@
 		<?php foreach($se as $se): ?>		
 			<div class="card" style="margin: 10px">				
 				<div class="image">					
-					<img class="ui medium image" src="res/img/img_se/<?php echo $se["img_se"];?>.png" alt="<?php echo $se["sector"];?>">				
+					<img class="ui medium image" src="../cms/res/img/img_se/<?php echo $se["img_se"];?>.png" alt="<?php echo $se["sector"];?>">				
 				</div>
 				<div class="content">
 					<h2 class="header"><?php echo $se['sector'] ?></h2>

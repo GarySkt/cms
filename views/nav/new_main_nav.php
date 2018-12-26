@@ -3,13 +3,13 @@
   <div class="ui text menu navbar" id="labarra" style="margin-bottom: 0px; ">
   <div class="right menu">
     <div class="item">
-  <img src="res/img/blancoconrojo.png" id="ellogo" alt="">  
+  <img src="/cms/res/img/blancoconrojo.png" id="ellogo" alt="">  
   </div>
     <a href="/cms/index.php" class="item" style="color:#FFFFFF;">
     Inicio
     </a>  
   <div class="ui simple dropdown item" style="color:#FFFFFF;">
-    <a href="http://localhost/cms/dircetur" style="color:#FFFFFF;">
+    <a href="dircetur" style="color:#FFFFFF;">
       Institucional</a>      
       <div class="menu">      
         <div class="ui simple dropdown item">

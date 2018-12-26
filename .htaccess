@@ -22,6 +22,8 @@ RewriteRule ^admin/manual_admin$ admin/index.php?section=manual_admin [QSA]
 RewriteRule ^admin/pom$ admin/index.php?section=pom [QSA]
 RewriteRule ^admin/sectores_exportacion$ admin/index.php?section=sectores_exportacion [QSA]
 
+RewriteRule ^admin/analisis_exportacion$ admin/index.php?section=analisis_exportacion [QSA]
+
 #Ruta administrador ART
 RewriteRule ^admin/asociacionesartesanales$ admin/index.php?section=asociacionesartesanales [QSA]
 

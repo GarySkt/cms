@@ -22,6 +22,13 @@
 		//obtener contenido de publicacion
 		$se = $user->getSectorExportacion();	
 		$slider = $user->getSlider();	
+	}elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="analisisexportacion"
+	){
+		//obtener contenido de 
+		$analisis_x = $user->getAnalisisExport();		
+		$slider = $user->getSlider();
 	}
 
 

@@ -16,7 +16,7 @@
           <?php } else { ?>
             <div class="carousel-item">
           <?php } ?>
-              <img class="d-block w-100" style="height: 650px; width: 450px;" src="res/img/img_slider/<?php echo $slider['img'] ?>">
+              <img class="d-block w-100" style="height: 650px; width: 450px;" src="/cms/res/img/img_slider/<?php echo $slider['img'] ?>">
             </div>
 
       <?php endforeach; ?>    

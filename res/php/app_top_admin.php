@@ -41,6 +41,13 @@
 		$se = $user->getSectorExportacion();		
 	}elseif(
 		isset($_GET['section']) &&
+		$_GET['section']=="analisis_exportacion"
+	){
+		//obtener contenido de 
+		$analisis_x = $user->getAnalisisExport();		
+	}
+	elseif(
+		isset($_GET['section']) &&
 		$_GET['section']=="asociaciones_artesanales"
 	){
 		//obtener contenido de asociaciones artesanales

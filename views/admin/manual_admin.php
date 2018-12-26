@@ -38,9 +38,33 @@
 	</div>	
 	<h2><b>4. Comercio Exterior</b></h2>
 	<h3>a. Planes Operativos de Mercado</h3>
+	<p>Para agregar un nuevo Plan Operativo de Mercado tendra que ingresar el nombre del Pa&iacute;s y seleccionar el archivo en formato PDF correspondiente y hacer click en "Subir".</p>
+	<div class="ui massive center image" >
+		<img src="../res/img/manual/pom.PNG" alt="">	
+	</div>	
 	<h3>b. Sectores de Exportaci&oacute;n</h3>
+	<p>Agregar un nuevo sector de exportacion bastara con rellenar los campos que se muestran:</p>
+	<p>- El primer campo hace referencia a una imagen referencial del sector de exportacion</p>
+	<p>- Los siguientes son el nombre del Sector, los productos exportados, Mercados de exportacion y el Total FOB.</p>
+	<div class="ui massive center image" >
+		<img src="../res/img/manual/se_save.PNG" alt="">	
+	</div>	
+	<p>Para eliminar un Sector de Exportacion bastara con hacer click en el icono de Eliminacion.</p>
+	<div class="ui massive center image" >
+		<img src="../res/img/manual/se_delete.PNG" alt="">	
+	</div>	
 	<h3>c. An&aacute;lisis de Exportaci&oacute;n</h3>
-	<h3>d. PERX</h3>
+	<p>Los An&aacute;lisis de Exportaci&oacute;n son subidos por mes y por lo tanto solo debera ingresar el Mes y el archivo pdf respectivo.</p>
+	<div class="ui massive center image" >
+		<img src="../res/img/manual/analisisexportacion.PNG" alt="">	
+	</div>	
+	<h2><b>5. Artesania</b></h2>
+	<h3>a. Asociaciones Artesanales</h3>
+	<p>Las asociaciones artesanales solo seran agregadas si cumplen con los requerimientos necesarios para su funcionamiento. Debera rellenar todos los datos que se muestran.</p>
+	<div class="ui massive center image" >
+		<img src="../res/img/manual/asoc_art.PNG" alt="">	
+	</div>
+
 
 	
 	

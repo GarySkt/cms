@@ -97,6 +97,12 @@
 			$_GET['section']=="sectores_exportacion"
 		){
 			require '../views/admin/cx/sectores_exportacion.php';
+		}elseif(			
+			isset($_SESSION['admin']) && 
+			isset($_GET['section']) &&
+			$_GET['section']=="analisis_exportacion"
+		){
+			require '../views/admin/cx/analisis_exportacion.php';
 		}
 		//artesania
 		elseif(			

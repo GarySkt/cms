@@ -130,6 +130,18 @@
 			return $se;
 		}
 		/* end Sectores de Exportacion*/
+		/*analisis de exportacion*/
+		public function getAnalisisExport(){
+			global $database;
+
+			$analisis_x = $database->select("analisis_exportacion",[
+				"id_ae",
+				"mes",
+				"file_ae"				
+			]);
+			return $analisis_x;
+		}
+		/*end analisis de exportacion*/
 		/*end CX*/
 		/*ARTESANIA*/
 		
