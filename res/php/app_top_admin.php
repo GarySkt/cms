@@ -69,6 +69,14 @@
 		//obtener contenido pom
 		$AllPost = $user->getAllPosts();		
 	}
+	elseif(
+		isset($_GET['section']) &&
+		$_GET['section']=="banner"
+	){
+		//obtener contenido slider
+		$slider = $user->getSlider();
+				
+	}
 
 
 	

@@ -36,7 +36,12 @@
 	<div class="ui massive center image" >
 		<img src="../res/img/manual/categorias.PNG" alt="">	
 	</div>	
-	<h2><b>4. Comercio Exterior</b></h2>
+	<h2><b>4. Slider</b></h2>
+	<p>Debera subir una imagen de 1024 x 400 px para una mejor visualizacion de la imagen en la portada, para habilitar o deshabilitar la imagen debera cambiar su estado a inactivo.</p>
+	<div class="ui massive center image" >
+		<img src="../res/img/manual/slider.PNG" alt="">	
+	</div>
+	<h2><b>5. Comercio Exterior</b></h2>
 	<h3>a. Planes Operativos de Mercado</h3>
 	<p>Para agregar un nuevo Plan Operativo de Mercado tendra que ingresar el nombre del Pa&iacute;s y seleccionar el archivo en formato PDF correspondiente y hacer click en "Subir".</p>
 	<div class="ui massive center image" >
@@ -58,7 +63,7 @@
 	<div class="ui massive center image" >
 		<img src="../res/img/manual/analisisexportacion.PNG" alt="">	
 	</div>	
-	<h2><b>5. Artesania</b></h2>
+	<h2><b>6. Artesania</b></h2>
 	<h3>a. Asociaciones Artesanales</h3>
 	<p>Las asociaciones artesanales solo seran agregadas si cumplen con los requerimientos necesarios para su funcionamiento. Debera rellenar todos los datos que se muestran.</p>
 	<div class="ui massive center image" >
