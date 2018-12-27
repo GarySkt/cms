@@ -4,7 +4,7 @@
 	
 	<br>
 	<div class="ui centered massive image">
-		<img src="../res/img/logodirceturcolor.png" alt="Logo">	
+		<img src="/cms/res/img/logodirceturcolor.png" alt="Logo">	
 	</div>
 	<br>
 </div>

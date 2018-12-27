@@ -6,11 +6,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Direccion Regional de Comercio Exterior y Turismo</title>
-	<link rel="stylesheet" href="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.css">
+	<link rel="stylesheet" href="/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="http://localhost/cms/res/css/main.css">
+	<link rel="stylesheet" href="/cms/res/css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="icon" type="image/png" href="res/img/escudo.png">	
+	<link rel="icon" type="image/png" href="/cms/res/img/escudo.png">	
 
 	
 
@@ -137,9 +137,9 @@
 	 <?php require 'views/nav/footer.php';?>
 
 	
-	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.min.js"></script>
-	<script src="http://localhost/cms/res/css/framework/Semantic-UI-CSS-master/semantic.js"></script>
-	<script src="http://localhost/cms/res/js/main.js"></script>
+	<script src="/res/css/framework/Semantic-UI-CSS-master/semantic.min.js"></script>
+	<script src="/res/css/framework/Semantic-UI-CSS-master/semantic.js"></script>
+	<script src="/res/js/main.js"></script>
 	
 </body>
 </html>

@@ -140,7 +140,8 @@ try	{
 			if(namepom !== "") {
 				//subir publicacion
 				//contiene toda la informacion del formulario
-				var formData = new FormData($("#new_posts_container")[0]);				
+				var formData = new FormData($("#agregar_pom_container")[0]);
+				console.log(formData)				
 				$.ajax({
 					//xhr request de http
 					xhr: function(){
