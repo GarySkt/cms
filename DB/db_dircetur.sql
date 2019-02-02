@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-12-2018 a las 00:21:24
+-- Tiempo de generación: 02-02-2019 a las 20:12:31
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -42,6 +42,26 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`admin_id`, `username`, `email`, `password`, `created_at`) VALUES
 (1, 'admin', 'admin@admin.com', '$2y$10$d5CN1IctIIjEUOXjedMZAOIFOfy45ambh/xQCP7CNCE/YW3hWkRrK', '111');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `analisis_exportacion`
+--
+
+CREATE TABLE `analisis_exportacion` (
+  `id_ae` int(11) NOT NULL,
+  `mes` varchar(20) NOT NULL,
+  `file_ae` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `analisis_exportacion`
+--
+
+INSERT INTO `analisis_exportacion` (`id_ae`, `mes`, `file_ae`) VALUES
+(1, 'Enero', 'enero.pdf'),
+(2, 'Febrero', 'febrero.pdf');
 
 -- --------------------------------------------------------
 
@@ -161,11 +181,11 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `comment`, `img`, `link`, `estado`) VALUES
-(1, '<p style=\"text-align: center;\"><strong>Test1</strong></p>', 'sli2.jpg', '', 'i'),
-(2, '<p><strong>slider1</strong></p>', 'sli1.jpg', '', 'i'),
+(1, '<p style=\"text-align: center;\"><strong>Test1</strong></p>', 'sli2.jpg', '', 'A'),
+(2, '<p><strong>slider1</strong></p>', 'sli1.jpg', '', 'A'),
 (3, '<p style=\"text-align: center;\"><strong>Direccion regional de comercio exterior y turismo</strong></p>', 'banner.png', 'http://directur.gob.pe', 'A'),
-(4, '<p>testetoasdsd</p>', 'footer-bg.jpg', '', 'I'),
-(5, '<p>Dia mundial del turismo</p>', 'DIA.png', 'http://www.mincetur.gob.pe', 'I'),
+(4, '<p>testetoasdsd</p>', 'footer-bg.jpg', '', 'A'),
+(5, '<p>Dia mundial del turismo</p>', 'DIA.png', 'http://www.mincetur.gob.pe', 'A'),
 (6, '<p style=\"text-align: center;\"><strong>Mincetur</strong></p>', 'standard_foto1.jpg', '', 'A');
 
 -- --------------------------------------------------------
@@ -191,9 +211,7 @@ INSERT INTO `tbl_uploads` (`id`, `name`, `file`, `type`, `size`) VALUES
 (8, 'JAPON', '14177-pdm-japon.pdf', 'application/pdf', 3632),
 (9, 'PANAMA', '54294-pdm-panama.pdf', 'application/pdf', 2434),
 (10, 'CHILE', '82386-pdm_chile.pdf', 'application/pdf', 11611),
-(11, 'TURQUIA', '34410-turquia.pdf', 'application/pdf', 11475),
-(13, '', '5c048f95a7b7f', '', 0),
-(14, '', '5c04902181510', '', 0);
+(11, 'TURQUIA', '34410-turquia.pdf', 'application/pdf', 11475);
 
 -- --------------------------------------------------------
 
@@ -249,6 +267,12 @@ INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasena`, `email`, `estado`)
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Indices de la tabla `analisis_exportacion`
+--
+ALTER TABLE `analisis_exportacion`
+  ADD PRIMARY KEY (`id_ae`);
 
 --
 -- Indices de la tabla `asociacion_artesanal`
@@ -308,6 +332,11 @@ ALTER TABLE `usuario`
 ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT de la tabla `analisis_exportacion`
+--
+ALTER TABLE `analisis_exportacion`
+  MODIFY `id_ae` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT de la tabla `asociacion_artesanal`
 --
 ALTER TABLE `asociacion_artesanal`
@@ -321,7 +350,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `post`
 --
 ALTER TABLE `post`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `sector_exportacion`
 --
@@ -336,7 +365,7 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT de la tabla `tbl_uploads`
 --
 ALTER TABLE `tbl_uploads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
